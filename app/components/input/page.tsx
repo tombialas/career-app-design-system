@@ -14,14 +14,14 @@ export default function InputDocPage() {
         </p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Input</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Textové pole pro formuláře – pill tvar, diffuse shadow. Volitelně label a chybová hláška; chyba = feedback.danger (ring).
+          A text field for forms—pill shape with a diffuse shadow. Optional label and error helper text; error uses feedback.danger (ring).
         </p>
       </header>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">S labelem</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">With label</h2>
         <p className="mb-4 text-sm text-ds-text-secondary">
-          Prop <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">label</code> pro a11y; propojí se přes htmlFor/id.
+          The <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">label</code> prop for accessibility; connects via htmlFor/id.
         </p>
         <div className="max-w-sm space-y-4">
           <Input label="Job title" placeholder="e.g. Product Manager" />
@@ -32,7 +32,7 @@ export default function InputDocPage() {
       <section>
         <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Sizes</h2>
         <p className="mb-4 text-sm text-ds-text-secondary">
-          sm, md (default), lg – výška a padding v souladu s Buttonem.
+          sm, md (default), lg — height and padding aligned with the Button.
         </p>
         <div className="max-w-sm space-y-4">
           <Input size="sm" placeholder="Small" />
@@ -42,9 +42,9 @@ export default function InputDocPage() {
       </section>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Stavy</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">States</h2>
         <p className="mb-4 text-sm text-ds-text-secondary">
-          Error = červený ring + helper text; disabled = snížená opacity, bez interakce.
+          Error = danger ring + helper text; disabled = reduced opacity, no interaction.
         </p>
         <div className="max-w-sm space-y-4">
           <Input

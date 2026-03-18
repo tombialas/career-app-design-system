@@ -9,12 +9,12 @@ export default function AvatarDocContent() {
         <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">Component</p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Avatar</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Avatar je Radix primitive pro profilovku: image + fallback. Default je rounded-full a overflow-hidden.
+          Avatar is a Radix primitive for profile displays: image + fallback. The default is rounded-full and overflow-hidden.
         </p>
       </header>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Základ</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Basics</h2>
         <div className="flex flex-wrap items-center gap-6">
           <Avatar className="h-10 w-10">
             <AvatarImage src="https://picsum.photos/80" alt="User avatar" />

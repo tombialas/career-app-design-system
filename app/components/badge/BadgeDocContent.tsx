@@ -9,7 +9,7 @@ export default function BadgeDocContent() {
         <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">Component</p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Badge</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Mini indikátor (ne Chip). Typicky pro PRO tag, malé count badge, nebo jemné status štítky.
+          A small indicator (not a Chip). Typically used for PRO tags, tiny count badges, or subtle status labels.
         </p>
       </header>
 

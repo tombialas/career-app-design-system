@@ -88,7 +88,7 @@ export default async function OrganismsDocsPage({
           <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">
             Category
           </p>
-          <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Organisms</h1>
+          <h2 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Organisms</h2>
           <TabsNav tabs={tabs} defaultValue="app-shell" activeValue={active} />
         </div>
         {content}

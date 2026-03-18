@@ -52,7 +52,7 @@ const ModalContent = React.forwardRef<
       {showClose && (
         <DialogPrimitive.Close
           className="absolute right-4 top-4 rounded-full p-2 text-ds-text-muted hover:bg-ds-surface-card-soft/60 hover:text-ds-text-primary"
-          aria-label="Zavřít"
+          aria-label="Close"
         >
           <X className="h-5 w-5" />
         </DialogPrimitive.Close>

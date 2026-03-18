@@ -14,33 +14,33 @@ export default function AccordionDocContent() {
         <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">Component</p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Accordion</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Disclosure UI postavené na Radix Accordion. Kritické je plynulé rozevírání přes Radix height
-          proměnnou a naše motion tokeny.
+          Disclosure UI built on Radix Accordion. Smooth expansion is critical: it uses Radix's height variable
+          and our motion tokens.
         </p>
       </header>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Základ</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Basics</h2>
         <div className="max-w-xl rounded-3xl border border-ds-border-subtle bg-ds-surface-card/70 p-4 backdrop-blur-xl">
           <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
-              <AccordionTrigger>Co je “The Vault”?</AccordionTrigger>
+              <AccordionTrigger>What is “The Vault”?</AccordionTrigger>
               <AccordionContent>
-                Privátní znalostní základna kandidáta: role, výsledky, artefakty, preference. Slouží jako
-                zdroj pravdy pro tailoring (bez halucinací).
+                A private knowledge base of the candidate: role, results, artifacts, and preferences. It acts as
+                the source of truth for tailoring (no hallucinations).
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>Jak funguje semantic recruitment?</AccordionTrigger>
+              <AccordionTrigger>How does semantic recruitment work?</AccordionTrigger>
               <AccordionContent>
-                Nehledáme jen keywords. Mapujeme intent a kontext (zodpovědnosti, scope, seniorita) a
-                porovnáváme s job požadavky.
+                We don't look for keywords only. We map intent and context (responsibilities, scope, seniority) and
+                compare it to job requirements.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger>Kdy použít Accordion?</AccordionTrigger>
+              <AccordionTrigger>When to use Accordion?</AccordionTrigger>
               <AccordionContent>
-                Pro FAQ, sekce nastavení a progressive disclosure. Ne pro primární navigaci.
+                For FAQs, settings sections, and progressive disclosure. Not for primary navigation.
               </AccordionContent>
             </AccordionItem>
           </Accordion>

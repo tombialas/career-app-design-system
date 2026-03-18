@@ -8,7 +8,7 @@ function ToastDemo() {
   return (
     <div className="space-y-4">
       <p className="text-sm text-ds-text-secondary">
-        Obal appku (nebo sekci) v <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">Toaster</code>, pak <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">useToast().toast(...)</code>.
+        Wrap your app (or a section) in <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">Toaster</code>, then call <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">useToast().toast(...)</code>.
       </p>
       <div className="flex flex-wrap gap-2">
         <Button
@@ -58,7 +58,7 @@ export default function ToastDocContent() {
             Toast
           </h1>
           <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-            Krátká zpětná vazba (uloženo, chyba, úspěch). Obal appku v <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">Toaster</code>, pak <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">useToast().toast(&#123; title, description, variant &#125;)</code>. Po 5s zmizí; swipe nebo křížek zavře.
+            Short feedback messages (saved, error, success). Wrap the app in <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">Toaster</code>, then call <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">useToast().toast(&#123; title, description, variant &#125;)</code>. They disappear after 5s; swipe or close with the cross.
           </p>
         </header>
 

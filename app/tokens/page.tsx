@@ -26,7 +26,7 @@ export default function TokensPage() {
           Tokens
         </h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Sémantické tokeny: barvy, typografie, layout, motion, z-index, border. Jediný zdroj pravdy – nepoužívej ad-hoc hodnoty.
+          Semantic tokens: colors, typography, layout, motion, z-index, and borders. The single source of truth—don’t use ad-hoc values.
         </p>
       </header>
 
@@ -221,15 +221,21 @@ export default function TokensPage() {
       <section id="motion">
         <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Motion</h2>
         <p className="mb-4 text-sm text-ds-text-secondary">
-          Duration: fast (hover, feedback), normal (dropdown, modal open), slow (sidebar/drawer). Easing: ease-out-expo pro plynulý dojezd – karty a overlay ne naskakují lineárně.
+          Duration: fast (hover, feedback), normal (dropdown, modal open), slow (sidebar/drawer). Easing: ease-out-expo for smooth arrivals—cards and overlays don’t snap linearly.
         </p>
         <div className="grid gap-6 sm:grid-cols-2">
           <div>
             <h3 className="text-sm font-semibold text-ds-text-secondary">Duration</h3>
             <ul className="mt-2 space-y-1 text-sm text-ds-text-primary">
-              <li><code className="rounded bg-ds-surface-card-soft/70 px-1">fast</code> {durationTokens.fast} — hover na tlačítku, focus</li>
-              <li><code className="rounded bg-ds-surface-card-soft/70 px-1">normal</code> {durationTokens.normal} — otevření dropdownu, modal</li>
-              <li><code className="rounded bg-ds-surface-card-soft/70 px-1">slow</code> {durationTokens.slow} — vyjetí sidebaru / draweru</li>
+              <li>
+                <code className="rounded bg-ds-surface-card-soft/70 px-1">fast</code> {durationTokens.fast} — button hover, focus
+              </li>
+              <li>
+                <code className="rounded bg-ds-surface-card-soft/70 px-1">normal</code> {durationTokens.normal} — dropdown open, modal
+              </li>
+              <li>
+                <code className="rounded bg-ds-surface-card-soft/70 px-1">slow</code> {durationTokens.slow} — sidebar / drawer slide-out
+              </li>
             </ul>
           </div>
           <div>
@@ -249,18 +255,18 @@ export default function TokensPage() {
       <section id="z-index">
         <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Z-Index</h2>
         <p className="mb-4 text-sm text-ds-text-secondary">
-          Jedna škála napříč appkou. Overlay pod modalem, toast nahoře.
+          One z-index scale across the app. Overlay sits under modals, toasts stay on top.
         </p>
         <ul className="space-y-1 text-sm text-ds-text-primary">
           {(
             [
-              ["base", "Výchozí vrstva"],
-              ["above", "Nad obsahem (sticky)"],
-              ["overlay", "Překryv (backdrop draweru)"],
+              ["base", "Base layer"],
+              ["above", "Above content (sticky)"],
+              ["overlay", "Overlay (drawer backdrop)"],
               ["dropdown", "Dropdown, popover"],
               ["modal", "Modal, dialog"],
-              ["toast", "Toast notifikace"],
-              ["max", "Max (tooltip, ensure on top)"],
+              ["toast", "Toast notifications"],
+              ["max", "Max (tooltips; ensure on top)"],
             ] as const
           ).map(([key, desc]) => (
             <li key={key}>
@@ -276,7 +282,7 @@ export default function TokensPage() {
       <section id="border-width">
         <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Stroke / Border width</h2>
         <p className="mb-4 text-sm text-ds-text-secondary">
-          Tloušťka okrajů, dividerů, focus ringu.
+          Border thickness for dividers and focus rings.
         </p>
         <div className="flex flex-wrap items-baseline gap-6">
           {(Object.entries(borderWidthTokens) as [keyof typeof borderWidthTokens, number][]).map(([key, value]) => (

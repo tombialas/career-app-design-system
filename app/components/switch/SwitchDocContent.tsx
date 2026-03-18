@@ -13,12 +13,12 @@ export default function SwitchDocContent() {
         <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">Component</p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Switch</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Přepínač postavený na Radix Switch. Apple pill tvar, focus ring a motion tokeny.
+          A switch built on Radix Switch. Apple-style pill shape, focus ring, and motion tokens.
         </p>
       </header>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Stavy</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">States</h2>
         <div className="flex flex-wrap items-center gap-8">
           <div className="flex items-center gap-3">
             <Switch checked={checked} onCheckedChange={setChecked} id="switch-controlled" />
@@ -56,7 +56,7 @@ export default function SwitchDocContent() {
             <strong>On:</strong> bg-ds-primary-strong
           </li>
           <li>
-            <strong>Motion:</strong> duration-ds-fast + ease-ds-out (thumb i barva)
+            <strong>Motion:</strong> duration-ds-fast + ease-ds-out (thumb and color)
           </li>
         </ul>
       </section>

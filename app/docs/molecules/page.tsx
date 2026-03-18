@@ -76,7 +76,7 @@ export default async function MoleculesDocsPage({
           <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">
             Category
           </p>
-          <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Molecules</h1>
+          <h2 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Molecules</h2>
           <TabsNav tabs={tabs} defaultValue="button" activeValue={active} />
         </div>
         {content}

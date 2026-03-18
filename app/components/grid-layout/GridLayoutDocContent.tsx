@@ -19,7 +19,7 @@ export default function GridLayoutDocContent() {
         <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">Component</p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Grid layout</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Single source of truth pro 12-column systém (base 4, md 8, lg 12) + tokenizované gapy.
+          Single source of truth for the 12-column system (base 4, md 8, lg 12) + tokenized gaps.
         </p>
       </header>
 

@@ -21,7 +21,7 @@ export default function DropdownMenuDocContent() {
           Dropdown menu
         </h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Menu po kliknutí na trigger (tlačítko nebo ikona). Radix. Přepínač jazyka, akce u karet (⋯), cokoliv jako seznam akcí.
+          A menu opened after clicking the trigger (button or icon). Radix. Language toggles, card actions (⋯), anything as an action list.
         </p>
       </header>
 

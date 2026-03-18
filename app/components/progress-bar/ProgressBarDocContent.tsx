@@ -13,13 +13,13 @@ export default function ProgressBarDocContent() {
           Progress bar
         </h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Lineární progress 0–100 % (LoadingStatus, tailor). Výchozí fialová; volitelně barvy podle skóre (useScoreColors).
+          A linear progress bar from 0–100% (LoadingStatus, tailoring). Default is purple; optionally use score-based colors (useScoreColors).
         </p>
       </header>
 
       <section>
         <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">
-          Default (fialová)
+          Default (purple)
         </h2>
         <div className="max-w-md space-y-4">
           <ProgressBar value={0} />
@@ -30,7 +30,7 @@ export default function ProgressBarDocContent() {
 
       <section>
         <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">
-          Barvy podle skóre (useScoreColors)
+          Score-based colors (useScoreColors)
         </h2>
         <div className="max-w-md space-y-4">
           <ProgressBar value={25} useScoreColors />
@@ -45,8 +45,8 @@ export default function ProgressBarDocContent() {
         </h2>
         <div className="text-sm text-ds-text-secondary">
           <ul className="list-inside list-disc space-y-1">
-            <li><strong>Výška:</strong> h-2 (přes className přepsatelné)</li>
-            <li><strong>Barvy:</strong> default = ds-primary-strong (fialová); useScoreColors = ds-score-low/medium/high</li>
+            <li><strong>Height:</strong> h-2 (override via className)</li>
+            <li><strong>Colors:</strong> default = ds-primary-strong (purple); useScoreColors = ds-score-low/medium/high</li>
             <li><strong>A11y:</strong> role="progressbar", aria-valuenow/min/max</li>
           </ul>
         </div>

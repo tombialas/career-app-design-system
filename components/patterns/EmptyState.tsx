@@ -3,18 +3,18 @@
 import type { ReactNode } from "react";
 
 type EmptyStateProps = {
-  /** Ikona nebo ilustrace (Lucide ikona doporučeno). */
+  /** Icon or illustration (Lucide icon recommended). */
   icon?: ReactNode;
-  /** Hlavní nadpis. */
+  /** Main heading. */
   title: string;
   /** Popis pod nadpisem. */
   description?: string;
-  /** Volitelná CTA (Button nebo odkaz). */
+  /** Optional CTA (Button or link). */
   action?: ReactNode;
   className?: string;
 };
 
-/** Prázdný stav: ikona + nadpis + popis + volitelná akce. */
+/** Empty state: icon + heading + description + optional action. */
 export function EmptyState({
   icon,
   title,

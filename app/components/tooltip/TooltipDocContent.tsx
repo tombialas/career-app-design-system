@@ -21,8 +21,8 @@ export default function TooltipDocContent() {
             Tooltip
           </h1>
           <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-            Krátká nápověda na hover (nebo focus). Radix; obal sekci v{" "}
-            <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">TooltipProvider</code>. Obsah: tmavý povrch, náš stín.
+            A short hint on hover (or focus). Radix; wrap the section in{" "}
+            <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">TooltipProvider</code>. Content: dark surface, our shadow.
           </p>
         </header>
 

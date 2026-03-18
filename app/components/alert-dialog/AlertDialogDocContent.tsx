@@ -25,7 +25,7 @@ export default function AlertDialogDocContent() {
           Alert dialog
         </h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Modal na potvrzení akce (smazat, přepsat, zkontrolovat). Radix AlertDialog — focus trap, Escape zavře. Tlačítka: <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">asChild</code> + náš Button.
+          A confirmation modal for actions (delete, edit, review). Radix AlertDialog — focus trap and Escape closes it. Buttons: <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">asChild</code> + our Button.
         </p>
       </header>
 

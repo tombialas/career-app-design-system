@@ -3,7 +3,7 @@ import SkillBadgeDocContent from "./SkillBadgeDocContent";
 
 export const metadata = {
   title: "Skill badge · Career Design System",
-  description: "Skill badge: dovednost s remove/edit v The Vault",
+  description: "Skill badge: a skill pill with remove/edit actions in The Vault",
 };
 
 export default function SkillBadgeDocPage() {
@@ -17,7 +17,7 @@ export default function SkillBadgeDocPage() {
           Skill badge
         </h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Tag dovednosti v The Vault: jeden pill s textem a volitelnými ikonami odstranit (X) a edit (tužka). Varianty hard (modrá) / soft (fialová).
+          Skill tag in The Vault: one pill with text and optional icons to remove (X) and edit (pencil). Variants: hard (blue) / soft (purple).
         </p>
       </header>
 
@@ -30,10 +30,10 @@ export default function SkillBadgeDocPage() {
       </section>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">S remove a edit</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">With remove and edit</h2>
         <p className="mb-4 text-sm text-ds-text-secondary">
           <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">onRemove</code> a{" "}
-          <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">onEdit</code> – callbacky pro ikony.
+          <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">onEdit</code> – callbacks for the icons.
         </p>
         <SkillBadgeDocContent />
       </section>
@@ -41,9 +41,9 @@ export default function SkillBadgeDocPage() {
       <section>
         <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Specification</h2>
         <ul className="list-inside list-disc space-y-1 text-sm text-ds-text-secondary">
-          <li><strong>Shape:</strong> pill (rounded-full), stejný vzhled jako Chip</li>
+          <li><strong>Shape:</strong> pill (rounded-full), same look as Chip</li>
           <li><strong>Hard:</strong> accent.blue.soft; Soft: primary.soft</li>
-          <li><strong>Ikony:</strong> Lucide Pencil (edit), X (remove), 3.5 / 3.5</li>
+          <li><strong>Icons:</strong> Lucide Pencil (edit), X (remove)</li>
         </ul>
       </section>
     </div>

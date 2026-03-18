@@ -10,7 +10,7 @@ export default function ContainerDocContent() {
         <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">Component</p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Container</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Wrapper pro max-width layouty. Používej pro obsah v canvas režimu; pro 12-col layout preferuj <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">Grid</code>.
+          A wrapper for max-width layouts. Use it for content in canvas mode; for 12-column layouts, prefer <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">Grid</code>.
         </p>
       </header>
 

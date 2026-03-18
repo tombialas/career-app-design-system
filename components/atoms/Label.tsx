@@ -4,7 +4,7 @@ import type { LabelHTMLAttributes } from "react";
 import { forwardRef } from "react";
 
 export type LabelProps = LabelHTMLAttributes<HTMLLabelElement> & {
-  /** Zobrazí červenou hvězdičku za textem (povinné pole). */
+  /** Shows a red asterisk after the text (required field). */
   isRequired?: boolean;
 };
 

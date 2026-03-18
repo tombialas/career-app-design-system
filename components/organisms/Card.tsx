@@ -19,7 +19,7 @@ type CardProps = {
   compact?: boolean;
   /** Standard padding: md = p-6, lg = p-10 (large hero cards). Ignored for sections/compact. */
   padding?: "md" | "lg";
-  /** Use Card.Header / Content / Footer – pak nemá Card vlastní padding (24px je v sekcích). */
+  /** Use Card.Header / Content / Footer — then Card has no own padding (24px padding is provided in sections). */
   sections?: boolean;
   children: ReactNode;
   className?: string;
@@ -68,7 +68,7 @@ export function Card({
   );
 }
 
-/** Sekce karty při sections={true}. Padding 24px (p-6), přechody mezi sekcemi zúžené (pb-3 / pt-3). */
+/** Card sections when sections={true}. Padding 24px (p-6), transitions are tightened (pb-3 / pt-3). */
 function CardHeader({ className = "", ...props }: { className?: string; children?: ReactNode }) {
   return <div className={`p-6 pb-3 ${className}`.trim()} {...props} />;
 }

@@ -15,12 +15,12 @@ export default function LabelDocPage() {
         </p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Label</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Samostatný label pro pole, když potřebuješ víc kontroly než Inputův <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">label</code> (vlastní layout, víc inputů pod jedním labelem).
+          A standalone label for fields when you need more control than the Input’s <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">label</code> (custom layout, multiple inputs under one label).
         </p>
       </header>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">S inputem</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">With input</h2>
         <p className="mb-4 text-sm text-ds-text-secondary">
           <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">htmlFor</code> + input <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">id</code> pro a11y.
         </p>
@@ -31,9 +31,9 @@ export default function LabelDocPage() {
       </section>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Povinné pole (isRequired)</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Required field (isRequired)</h2>
         <p className="mb-4 text-sm text-ds-text-secondary">
-          <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">isRequired</code> přidá červenou hvězdičku za text. Jedna prop, žádné ruční dokódovávání.
+          <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">isRequired</code> adds a red asterisk after the text. One prop—no manual annotation.
         </p>
         <div className="max-w-sm space-y-2">
           <Label htmlFor="label-required-field" isRequired>Email</Label>
@@ -45,8 +45,8 @@ export default function LabelDocPage() {
         <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Specification</h2>
         <div className="text-sm text-ds-text-secondary">
           <ul className="list-inside list-disc space-y-1">
-            <li><strong>Typografie:</strong> labelTiny — 12px, font-bold, uppercase, tracking-wider, text-ds-text-primary</li>
-            <li><strong>Required:</strong> isRequired → hvězdička v text-ds-feedback-danger, aria-hidden</li>
+            <li><strong>Typography:</strong> labelTiny — 12px, font-bold, uppercase, tracking-wider, text-ds-text-primary</li>
+            <li><strong>Required:</strong> isRequired → asterisk in text-ds-feedback-danger, aria-hidden</li>
             <li><strong>Spacing:</strong> add margin (e.g. mb-1.5) when used above an input</li>
           </ul>
         </div>

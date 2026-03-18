@@ -4,21 +4,21 @@ import type { ReactNode } from "react";
 import { Label } from "../atoms/Label";
 
 type FormFieldProps = {
-  /** Id pro propojení s inputem (htmlFor na Label). Předat stejné id do Input/Select/Textarea. */
+  /** Id for linking to an input (htmlFor on Label). Pass the same id to Input/Select/Textarea. */
   id?: string;
   label: ReactNode;
-  /** Povinné pole – Label zobrazí červenou hvězdičku (předává do atomu Label). */
+  /** Required field — Label shows a red asterisk (passed to the Label atom). */
   isRequired?: boolean;
-  /** Input, Select, Textarea, atd. */
+  /** Input, Select, Textarea, etc. */
   children: ReactNode;
-  /** Chybová hláška pod polem. */
+  /** Error message shown under the field. */
   error?: ReactNode;
-  /** Dodatečný popis pod labelem (např. hint). */
+  /** Additional description under the label (e.g. hint). */
   description?: ReactNode;
   className?: string;
 };
 
-/** Wrapper: Label + pole + volitelný error a description. Konzistentní spacing. */
+/** Wrapper: Label + field + optional error and description. Consistent spacing. */
 export function FormField({
   id,
   label,

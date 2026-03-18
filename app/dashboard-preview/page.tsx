@@ -34,8 +34,8 @@ export default function DashboardPreviewPage() {
           open={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
           onOpenMenu={() => setSidebarOpen(true)}
-          openMenuLabel="Otevřít menu"
-          closeMenuLabel="Zavřít menu"
+          openMenuLabel="Open menu"
+          closeMenuLabel="Close menu"
           footer={
             <div className="space-y-1 text-ds-on-dark-muted">
               <p className="text-sm font-medium text-ds-on-dark">Name Surname</p>
@@ -60,11 +60,11 @@ export default function DashboardPreviewPage() {
             href="/"
             className="text-sm font-medium text-ds-primary-strong hover:underline"
           >
-            ← Zpět na Overview
+            ← Back to Overview
           </Link>
         </div>
 
-        {/* Bento grid – 24px zaoblení, diffuse stíny, Figtree */}
+        {/* Bento grid with 24px rounding, diffuse shadows, and Figtree */}
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           <div className="md:col-span-2">
             <MatchScoreCard />
@@ -80,7 +80,7 @@ export default function DashboardPreviewPage() {
               Goal vs. experience
             </h3>
             <p className="mt-2 text-sm text-ds-text-secondary">
-              Ukázka další karty (Cíl vs. zkušenosti – metriky). Card + ProgressBar.
+              Example of another card (Goal vs. experience — metrics). Card + ProgressBar.
             </p>
           </div>
         </div>

@@ -14,7 +14,7 @@ export function getScoreBand(value: number): ScoreBand {
   return "high";
 }
 
-/** Barvy podle Figmy: track 500, vyplněná část 700, text 900. */
+/** Colors per Figma: track 500, filled part 700, text 900. */
 const scoreTrackClass: Record<ScoreBand, string> = {
   low: "text-ds-red-500",
   medium: "text-ds-yellow-500",
@@ -37,25 +37,25 @@ const scoreIconByBand: Record<ScoreBand, LucideIcon> = {
   high: Sparkles,
 };
 
-/** Tloušťka oblouku – masivní, ne nitka. */
+/** Arc thickness — bold, not a thin line. */
 const SCORE_STROKE_WIDTH = 12;
-/** Výchozí velikost (px). Poměr písma: 48px při 160px donutu → size * 0.3 */
+/** Default size (px). Font ratio: 48px at 160px donut -> size * 0.3 */
 const SCORE_DEFAULT_SIZE = 120;
 const SCORE_FONT_SIZE_RATIO = 48 / 160;
 
 type ScoreProps = {
   /** 0–100 */
   value: number;
-  /** halfDonut = semicircle (karta), circle = full ring s číslem uprostřed */
+  /** halfDonut = semicircle (card), circle = full ring with the number in the center */
   variant?: "halfDonut" | "circle";
-  /** Velikost v px (výchozí 120). Při 160px je písmo 48px. */
+  /** Size in px (default 120). At 160px, the font is 48px. */
   size?: number;
   className?: string;
-  /** U halfDonut: zobrazit hodnotu vedle. U circle se číslo vždy renderuje uprostřed. */
+  /** For halfDonut: show the value next to it. For circle: the number is always rendered in the center. */
   showValue?: boolean;
 };
 
-/** Half-donut: dolní půlkruh. Path a viewBox podle specifikace. */
+/** Half-donut: bottom semicircle. Path and viewBox follow the spec. */
 function HalfDonut({
   value,
   trackClass,
@@ -86,7 +86,7 @@ function HalfDonut({
   );
 }
 
-/** Plný kruhový ring: track 500, fill 700. Číslo 900 se renderuje v Score() uprostřed. */
+/** Full circular ring: track 500, fill 700. The 900-number is rendered in Score() in the center. */
 function CircleScore({
   value,
   trackClass,

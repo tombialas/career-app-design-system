@@ -12,22 +12,22 @@ export default function SelectDocContent() {
         </p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Select</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Výběr z options (Radix). Pill tvar triggeru (rounded-full), h-10, v souladu s Inputem. Dropdown rounded-2xl, shadow-ds-diffuse-md.
+          Selection from options (Radix). Pill-shaped trigger (rounded-full), h-10, aligned with the Input. Dropdown is rounded-2xl with shadow-ds-diffuse-md.
         </p>
       </header>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">S labelem</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">With label</h2>
         <div className="max-w-sm space-y-2">
-          <Label htmlFor="fruit">Ovoce</Label>
+          <Label htmlFor="fruit">Fruit</Label>
           <Select.Root>
             <Select.Trigger id="fruit" className="w-full">
-              <Select.Value placeholder="Vyberte…" />
+              <Select.Value placeholder="Select…" />
             </Select.Trigger>
             <Select.Content>
-              <Select.Item value="apple">Jablko</Select.Item>
-              <Select.Item value="banana">Banán</Select.Item>
-              <Select.Item value="orange">Pomeranč</Select.Item>
+              <Select.Item value="apple">Apple</Select.Item>
+              <Select.Item value="banana">Banana</Select.Item>
+              <Select.Item value="orange">Orange</Select.Item>
             </Select.Content>
           </Select.Root>
         </div>

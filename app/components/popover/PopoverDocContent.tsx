@@ -11,12 +11,12 @@ export default function PopoverDocContent() {
         <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">Component</p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Popover</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Context UI na Radix Popover. Glass surface, z-index token a animate-in/out (fade + zoom).
+          Context UI for Radix Popover. Glass surface, z-index token, and animate-in/out (fade + zoom).
         </p>
       </header>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Základ</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Basics</h2>
         <div className="flex flex-wrap items-center gap-4">
           <Popover>
             <PopoverTrigger asChild>
@@ -26,7 +26,7 @@ export default function PopoverDocContent() {
               <div className="space-y-2">
                 <p className="text-sm font-semibold text-ds-text-primary">Quick actions</p>
                 <p className="text-sm text-ds-text-secondary">
-                  Krátký kontext bez přebití stránky. Ideální pro mini nastavení nebo „more“ menu.
+                  Short context without overwhelming the page. Ideal for quick mini settings or a “more” menu.
                 </p>
                 <div className="flex items-center gap-2 pt-1">
                   <Badge variant="primary">PRO</Badge>

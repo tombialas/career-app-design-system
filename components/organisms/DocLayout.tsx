@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Sidebar, type SidebarNavItem, type SidebarNavGroup } from "./Sidebar";
 import { AppShell } from "./AppShell";
 import { Grid, GridCol } from "./GridLayout";
+import { Blocks, Box, Home, LayoutGrid, Palette, Puzzle } from "lucide-react";
 
 const linkComponent = ({
   href,
@@ -32,18 +33,12 @@ export function DocLayout({ children }: { children: React.ReactNode }) {
   }
 
   const navItems: SidebarNavItem[] = [
-    { href: "/", label: "Overview" },
-    { href: "/tokens", label: "Tokens" },
-    { href: "/docs/atoms", label: "Atoms" },
-    { href: "/docs/molecules", label: "Molecules" },
-    { href: "/docs/organisms", label: "Organisms" },
-    { href: "/docs/patterns", label: "Patterns" },
-    { href: "/demo/dashboard", label: "Demo: My Applications" },
-    { href: "/demo/detail", label: "Demo: Application detail" },
-    { href: "/demo/vault", label: "Demo: The Vault" },
-    { href: "/demo/profile", label: "Demo: My Profile" },
-    { href: "/demo/cards", label: "Demo: Cards" },
-    { href: "/demo/layout", label: "Demo: App shell" },
+    { href: "/", label: "Overview", icon: Home },
+    { href: "/tokens", label: "Tokens", icon: Palette },
+    { href: "/docs/atoms", label: "Atoms", icon: Box },
+    { href: "/docs/molecules", label: "Molecules", icon: Blocks },
+    { href: "/docs/organisms", label: "Organisms", icon: LayoutGrid },
+    { href: "/docs/patterns", label: "Patterns", icon: Puzzle },
   ];
   const sidebarCommon = {
     title: "Career Design System" as const,
@@ -79,7 +74,7 @@ export function DocLayout({ children }: { children: React.ReactNode }) {
         </Grid>
       </AppShell>
 
-      {/* Mobil: drawer + hamburger (s pozadím, aby byl obsah čitelný) */}
+      {/* Mobile: drawer + hamburger (with backdrop for readability) */}
       <div className="lg:hidden">
         <Sidebar
           variant="drawer"
@@ -87,8 +82,8 @@ export function DocLayout({ children }: { children: React.ReactNode }) {
           open={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
           onOpenMenu={() => setSidebarOpen(true)}
-          openMenuLabel="Otevřít menu"
-          closeMenuLabel="Zavřít menu"
+          openMenuLabel="Open menu"
+          closeMenuLabel="Close menu"
         />
       </div>
     </>

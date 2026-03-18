@@ -3,9 +3,9 @@
 import type { ReactNode } from "react";
 
 /**
- * Figma: barevné chipy = bg 500, border 700, text 900.
+ * Figma: colored chips = bg 500, border 700, text 900.
  * light = UI bg, dark = UI dark card.
- * Aliasy: default/primary/scoreHigh/scoreMedium/scoreLow pro zpětnou kompatibilitu.
+ * Aliases: default/primary/scoreHigh/scoreMedium/scoreLow for backward compatibility.
  */
 type ChipVariant =
   | "green"
@@ -42,7 +42,7 @@ const chipVariantClasses: Record<string, string> = {
     "bg-ds-primary-soft text-ds-primary-strong border border-ds-primary-strong",
   requirementMissing:
     "bg-ds-surface-card text-ds-text-muted border border-ds-border-subtle",
-  /* selected pouze pro light / dark */
+  /* selected only for light / dark */
   lightSelected:
     "bg-ds-primary-soft text-ds-text-primary border border-ds-primary-strong",
   darkSelected:
@@ -59,7 +59,7 @@ const variantAliases: Record<string, string> = {
 
 type ChipProps = {
   variant?: ChipVariant;
-  /** Pouze u light/dark: zvýrazněný stav (např. vybraný filtr). */
+  /** Only for light/dark: highlighted state (e.g. selected filter). */
   selected?: boolean;
   children: ReactNode;
   className?: string;

@@ -13,15 +13,15 @@ export default function ListItemDocContent() {
           List item
         </h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Řádek typu Settings / Language / FAQ: label, volitelná hodnota vpravo, chevron. Hravě přehledné.
+          Settings / Language / FAQ row type: label, optional value on the right, and a chevron. Playful and clear.
         </p>
       </header>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Použití</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Usage</h2>
         <div className="max-w-md space-y-2">
           <ListItem label="Settings" onClick={() => {}} />
-          <ListItem label="Language" value="Čeština" onClick={() => {}} />
+          <ListItem label="Language" value="Czech" onClick={() => {}} />
           <ListItem label="FAQ" onClick={() => {}} />
         </div>
       </section>

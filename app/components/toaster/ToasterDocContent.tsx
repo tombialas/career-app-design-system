@@ -44,8 +44,8 @@ export default function ToasterDocContent() {
         <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">Component</p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Toaster</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Globální toast notifications. Použití: renderuj <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">{"<Toaster />"}</code>{" "}
-          jednou v rootu, pak voláš <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">useToast()</code>.
+          Global toast notifications. Usage: render <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">{"<Toaster />"}</code>{" "}
+          once at the root, then call <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">useToast()</code>.
         </p>
       </header>
 

@@ -5,7 +5,7 @@ import { X, Pencil } from "lucide-react";
 
 type SkillBadgeProps = {
   children: ReactNode;
-  /** Hard = světle modrá, soft = světle fialová. */
+  /** Hard = light blue, soft = light purple. */
   variant?: "hard" | "soft";
   onRemove?: () => void;
   onEdit?: () => void;
@@ -17,7 +17,7 @@ const skillBadgeStyles = {
   soft: "bg-ds-primary-soft text-ds-text-primary",
 } as const;
 
-/** Skill tag v The Vault: jeden pill s textem + volitelně ikony odstranit/edit. */
+/** Skill tag in The Vault: one pill with text + optional remove/edit icons. */
 export function SkillBadge({
   children,
   variant = "soft",

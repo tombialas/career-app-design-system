@@ -9,8 +9,8 @@ export default function SpinnerDocContent() {
         <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">Component</p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Spinner</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Jednoduchý loader pro async stavy. Používá Lucide <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">Loader2</code>{" "}
-          a <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">animate-spin</code>.
+          A simple loader for async states. Uses Lucide <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">Loader2</code>{" "}
+          and <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">animate-spin</code>.
         </p>
       </header>
 

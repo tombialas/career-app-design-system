@@ -16,8 +16,8 @@ export default function CardDocPage() {
         </p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Card</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Kontejner pro výsledky, Vault, hero bloky. Varianty: default, soft, dark a reference akcenty (highlightPink / Green / Blue).
-          Volitelně{" "}
+          A container for results, Vault items, and hero blocks. Variants: default, soft, dark, and reference accents (highlightPink / Green / Blue).
+          Optionally{" "}
           <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">hoverable</code>,{" "}
           <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">compact</code>.
         </p>
@@ -26,16 +26,16 @@ export default function CardDocPage() {
       <section>
         <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Variants</h2>
         <p className="mb-4 text-sm text-ds-text-secondary">
-          default, soft, dark a akcenty (reference: růžová, zelená, modrá).
+          default, soft, dark, and accents (reference: pink, green, blue).
         </p>
         <div className="grid gap-4 sm:grid-cols-3">
           <Card variant="default">
             <p className="text-sm font-medium text-ds-text-primary">Default</p>
-            <p className="mt-1 text-sm text-ds-text-secondary">Bílá karta, diffuse shadow.</p>
+            <p className="mt-1 text-sm text-ds-text-secondary">White card with diffuse shadow.</p>
           </Card>
           <Card variant="soft">
             <p className="text-sm font-medium text-ds-text-primary">Soft</p>
-            <p className="mt-1 text-sm text-ds-text-secondary">Fialový nádech.</p>
+            <p className="mt-1 text-sm text-ds-text-secondary">Purple tint.</p>
           </Card>
           <Card variant="dark">
             <p className="text-sm font-medium text-ds-on-dark">Dark</p>

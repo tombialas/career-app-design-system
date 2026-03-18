@@ -17,35 +17,35 @@ export default function FormFieldDocPage() {
           Form field
         </h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Wrapper pro konzistentní formuláře: Label (s htmlFor), volitelný description, dítě (Input / Select / Textarea), chybová hláška. Spacing space-y-2.
+          A wrapper for consistent forms: Label (with htmlFor), optional description, child (Input / Select / Textarea), and an error message. Uses space-y-2 spacing.
         </p>
       </header>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Základní</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Basic</h2>
         <div className="max-w-sm">
-          <FormField id="demo-name" label="Jméno">
-            <Input id="demo-name" placeholder="Vaše jméno" />
+          <FormField id="demo-name" label="Name">
+            <Input id="demo-name" placeholder="Your name" />
           </FormField>
         </div>
       </section>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">S popisem a chybou</h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">With description and error</h2>
         <div className="max-w-sm space-y-4">
           <FormField
             id="demo-email"
             label="Email"
-            description="Použijeme ho jen pro notifikace."
+            description="We use this only for notifications."
           >
             <Input id="demo-email" placeholder="email@example.com" />
           </FormField>
           <FormField
             id="demo-err"
-            label="Pole s chybou"
-            error="Toto pole je povinné."
+            label="Error field"
+            error="This field is required."
           >
-            <Input id="demo-err" placeholder="Prázdné" />
+            <Input id="demo-err" placeholder="Empty" />
           </FormField>
         </div>
       </section>
@@ -53,9 +53,9 @@ export default function FormFieldDocPage() {
       <section>
         <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Specification</h2>
         <ul className="list-inside list-disc space-y-1 text-sm text-ds-text-secondary">
-          <li><strong>Label:</strong> Label s htmlFor když je id; jinak span s text-sm font-medium</li>
+          <li><strong>Label:</strong> Uses htmlFor when an id is present; otherwise renders a span with text-sm font-medium</li>
           <li><strong>Error:</strong> text-ds-feedback-danger, role="alert"</li>
-          <li><strong>Spacing:</strong> space-y-2 mezi label, description, child, error</li>
+          <li><strong>Spacing:</strong> space-y-2 between label, description, child, and error</li>
         </ul>
       </section>
     </div>

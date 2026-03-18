@@ -13,21 +13,19 @@ export default function SkeletonDocContent() {
           Skeleton
         </h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Placeholder pro loading (workspace, analýza). Blok s <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">animate-pulse</code>, barva ds-border-subtle. Šířku a výšku přes <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">className</code> (např. h-4 w-48).
+          Placeholder for loading (workspace, analysis). A block with <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">animate-pulse</code> and color ds-border-subtle. Set width and height via <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">className</code> (e.g. h-4 w-48).
         </p>
       </header>
 
       <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">
-          Varianty
-        </h2>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Variants</h2>
         <div className="space-y-4">
           <div>
-            <p className="mb-2 text-sm text-ds-text-muted">Řádek textu</p>
+            <p className="mb-2 text-sm text-ds-text-muted">Text line</p>
             <Skeleton className="h-4 w-64" />
           </div>
           <div>
-            <p className="mb-2 text-sm text-ds-text-muted">Tři řádky (blok)</p>
+            <p className="mb-2 text-sm text-ds-text-muted">Three lines (block)</p>
             <div className="space-y-2">
               <Skeleton className="h-4 w-full" />
               <Skeleton className="h-4 w-5/6" />
@@ -45,7 +43,7 @@ export default function SkeletonDocContent() {
             </div>
           </div>
           <div>
-            <p className="mb-2 text-sm text-ds-text-muted">Karta (placeholder)</p>
+            <p className="mb-2 text-sm text-ds-text-muted">Card (placeholder)</p>
             <div className="rounded-2xl border border-ds-border-subtle p-6">
               <Skeleton className="mb-4 h-6 w-1/2" />
               <Skeleton className="mb-2 h-4 w-full" />
@@ -62,10 +60,10 @@ export default function SkeletonDocContent() {
         </h2>
         <div className="text-sm text-ds-text-secondary">
           <ul className="list-inside list-disc space-y-1">
-            <li><strong>Barva:</strong> bg-ds-border-subtle</li>
-            <li><strong>Animace:</strong> animate-pulse (Tailwind)</li>
-            <li><strong>Zaoblení:</strong> rounded-lg</li>
-            <li><strong>A11y:</strong> role="status", aria-label="Načítání"</li>
+            <li><strong>Color:</strong> bg-ds-border-subtle</li>
+            <li><strong>Animation:</strong> animate-pulse (Tailwind)</li>
+            <li><strong>Rounding:</strong> rounded-lg</li>
+            <li><strong>A11y:</strong> role="status", aria-label="Loading"</li>
           </ul>
         </div>
       </section>

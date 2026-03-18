@@ -3,12 +3,10 @@
 import { Sidebar } from "../../../components/organisms/Sidebar";
 import { Card } from "../../../components/organisms/Card";
 import Link from "next/link";
-import { Home, Briefcase, User } from "lucide-react";
+import { Home } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "Home", icon: Home },
-  { href: "/demo/dashboard", label: "My Applications", icon: Briefcase },
-  { href: "/demo/profile", label: "My Profile", icon: User },
 ];
 
 export default function SidebarDocContent() {
@@ -18,8 +16,8 @@ export default function SidebarDocContent() {
         <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">Component</p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Sidebar</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Navigační panel: <strong>inline</strong> (floating bento) a <strong>drawer</strong> (mobile overlay).
-          Inline varianta je plovoucí card a může být dark (app screens) nebo transparent.
+          Navigation panel: <strong>inline</strong> (floating bento) and <strong>drawer</strong> (mobile overlay).
+          The inline variant is a floating card and can be dark (app screens) or transparent.
         </p>
       </header>
 
@@ -32,7 +30,7 @@ export default function SidebarDocContent() {
               themeVariant="dark"
               title="Logo"
               navItems={navItems}
-              activeHref="/demo/dashboard"
+              activeHref="/"
               linkComponent={({ href, children, className }) => (
                 <Link href={href} className={className}>
                   {children}
@@ -43,17 +41,7 @@ export default function SidebarDocContent() {
         </Card>
       </section>
 
-      <section>
-        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Live demos</h2>
-        <div className="flex flex-wrap gap-3">
-          <Link href="/demo/dashboard" className="text-sm font-medium text-ds-primary-strong hover:underline">
-            My Applications
-          </Link>
-          <Link href="/demo/profile" className="text-sm font-medium text-ds-primary-strong hover:underline">
-            My Profile
-          </Link>
-        </div>
-      </section>
+      {/* Live demo routes are intentionally hidden on the documentation site. */}
     </div>
   );
 }

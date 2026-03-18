@@ -44,7 +44,7 @@ export default async function PatternsDocsPage({
           <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">
             Category
           </p>
-          <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Patterns</h1>
+          <h2 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Patterns</h2>
           <TabsNav tabs={tabs} defaultValue="form-field" activeValue={active} />
         </div>
         {content}

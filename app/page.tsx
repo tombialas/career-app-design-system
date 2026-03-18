@@ -28,7 +28,7 @@ export default function OverviewPage() {
           </div>
         </div>
         <p className="max-w-3xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Všechno, co potřebuješ pro UI v Career App: tokeny, primitives a vzory. V appce:{" "}
+          Everything you need for UI in the Career App: tokens, primitives, and patterns. In the app:{" "}
           <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">
             docs/USING_IN_APP.md
           </code>
@@ -47,7 +47,7 @@ export default function OverviewPage() {
                 Components
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-ds-text-secondary">
-                Primitives a patterns (Button, Tabs, Card, Toast, Score…). Jasné API, specifikace, doc stránky.
+                Primitives and patterns (Button, Tabs, Card, Toast, Score…). Clear API, specs, and documentation pages.
               </p>
             </Card>
           </Link>
@@ -61,7 +61,7 @@ export default function OverviewPage() {
                 Tokens
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-ds-text-secondary">
-                Barvy, spacing, radius, elevation, typografie. Vždy přes sémantické `ds-*`.
+                Colors, spacing, radius, elevation, typography. Always via semantic `ds-*`.
               </p>
             </Card>
           </Link>
@@ -71,14 +71,16 @@ export default function OverviewPage() {
               Principles
             </p>
             <ul className="mt-3 space-y-2 text-sm text-ds-text-secondary">
-              <li><strong>Hravé.</strong> Přátelské, lehké, lidské – jako reference. Žádný strnulý corporate look.</li>
-              <li>Linear hierarchie: krátké nadpisy, minimum dekorací.</li>
-              <li>Surface = border + blur; stín jen jako jemná hloubka.</li>
-              <li>Pill a rounded-3xl pro hlavní interakce.</li>
+              <li>
+                <strong>Playful.</strong> Friendly, light, human—like a reference. No stiff corporate look.
+              </li>
+              <li>Linear hierarchy: short headings, minimal decoration.</li>
+              <li>Surface = border + blur; shadows only as subtle depth.</li>
+              <li>Pills and rounded-3xl for main interactions.</li>
             </ul>
           </Card>
 
-          <Link href="/demo/cards" className="col-span-12 lg:col-span-6">
+          <Link href="/docs/patterns" className="col-span-12 lg:col-span-6">
             <Card hoverable variant="soft" className="h-full">
               <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">
                 Patterns
@@ -92,7 +94,7 @@ export default function OverviewPage() {
                 <span className="rounded-full bg-ds-surface-card-soft/70 px-3 py-1">Skill badge</span>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-ds-text-secondary">
-                Jak karta a badgy vypadají v aplikaci: grid přihlášek, detail karty, dovednostní tagy.
+                How cards and badges look in the app: applications grid, detail cards, and skill tags.
               </p>
             </Card>
           </Link>

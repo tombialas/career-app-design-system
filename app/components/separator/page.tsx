@@ -14,7 +14,7 @@ export default function SeparatorDocPage() {
         </p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Separator</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Oddělovač mezi sekcemi. Barva: ds-border-subtle. Výchozí dekorativní (role="none"); <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">decorative=false</code> pro sémantické oddělovače.
+          A divider between sections. Color: ds-border-subtle. Decorative by default (role="none"); use <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">decorative=false</code> for semantic dividers.
         </p>
       </header>
 

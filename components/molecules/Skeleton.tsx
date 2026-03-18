@@ -9,7 +9,7 @@ const Skeleton = React.forwardRef<HTMLDivElement, SkeletonProps>(
     <div
       ref={ref}
       role="status"
-      aria-label="Načítání"
+      aria-label="Loading"
       className={`
         animate-pulse rounded-lg bg-ds-border-subtle
         ${className}

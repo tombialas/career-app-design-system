@@ -18,11 +18,11 @@ export default function TabsDocContent() {
           Tabs
         </h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Sekce profilu, kroky v tailoru. Radix Tabs —{" "}
+          Profile sections, steps in tailoring. Radix Tabs —{" "}
           <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">TabsRoot</code>,{" "}
           <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">TabsList</code>,{" "}
           <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">TabsTrigger</code>,{" "}
-          <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">TabsContent</code>. Klávesová navigace, focus ring.
+          <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">TabsContent</code>. Keyboard navigation, focus ring.
         </p>
       </header>
 
@@ -32,23 +32,23 @@ export default function TabsDocContent() {
         </h2>
         <TabsRoot defaultValue="overview">
           <TabsList>
-            <TabsTrigger value="overview">Přehled</TabsTrigger>
-            <TabsTrigger value="experience">Zkušenosti</TabsTrigger>
-            <TabsTrigger value="skills">Dovednosti</TabsTrigger>
+            <TabsTrigger value="overview">Overview</TabsTrigger>
+            <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="skills">Skills</TabsTrigger>
           </TabsList>
           <TabsContent value="overview">
             <p className="text-sm text-ds-text-secondary">
-              Obsah záložky Přehled. Sem přijde shrnutí profilu, doporučení, atd.
+              Overview tab content. This is where you place a profile summary, recommendations, and more.
             </p>
           </TabsContent>
           <TabsContent value="experience">
             <p className="text-sm text-ds-text-secondary">
-              Obsah záložky Zkušenosti. Chronologie rolí a projektů.
+              Experience tab content. A chronology of roles and projects.
             </p>
           </TabsContent>
           <TabsContent value="skills">
             <p className="text-sm text-ds-text-secondary">
-              Obsah záložky Dovednosti. Kompetence, jazyky, nástroje.
+              Skills tab content. Competencies, languages, and tools.
             </p>
           </TabsContent>
         </TabsRoot>
@@ -69,7 +69,7 @@ export default function TabsDocContent() {
               shadow-ds-diffuse-sm, focus-visible ring
             </li>
             <li>
-              <strong>TabsContent:</strong> mt-3, skrytý když inactive
+              <strong>TabsContent:</strong> mt-3, hidden when inactive
             </li>
           </ul>
         </div>

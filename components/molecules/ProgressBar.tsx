@@ -4,7 +4,7 @@ import * as React from "react";
 
 type TrafficBand = "low" | "medium" | "high";
 
-/** Semaforová logika: <60 low, 60–80 medium, >80 high. */
+/** Semaphore logic: <60 low, 60–80 medium, >80 high. */
 function getTrafficBand(value: number): TrafficBand {
   const v = Math.max(0, Math.min(100, value));
   if (v < 60) return "low";

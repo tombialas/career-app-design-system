@@ -18,9 +18,9 @@ export type SidebarVariant = "drawer" | "inline";
 export type SidebarThemeVariant = "transparent" | "dark";
 
 type SidebarProps = {
-  /** drawer = fixed overlay + hamburger (mobile). inline = sloupec uvnitř karty (desktop, Figma). */
+  /** drawer = fixed overlay + hamburger (mobile). inline = column inside a card (desktop, Figma). */
   variant?: SidebarVariant;
-  /** transparent = splývá s ds-surface-page (dokumentace). dark = tmavý panel (app obrazovky). */
+  /** transparent = blends with ds-surface-page (docs). dark = dark panel (app screens). */
   themeVariant?: SidebarThemeVariant;
   /** App or product name (top left). */
   title: React.ReactNode;

@@ -22,7 +22,7 @@ export default function ButtonsDocPage() {
         </p>
         <h1 className="text-3xl font-semibold tracking-tight text-ds-text-primary">Button</h1>
         <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Pill-shaped CTA – jedna barva, tři úrovně (default, hover, inactive). Ikony: Lucide jako child, s{" "}
+          Pill-shaped CTA — one color, three levels (default, hover, inactive). Icons: Lucide as the child, with{" "}
           <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">gap-3</code>.
         </p>
       </header>
@@ -47,7 +47,7 @@ export default function ButtonsDocPage() {
       <section>
         <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Sizes</h2>
         <p className="mb-4 text-sm text-ds-text-secondary">
-          sm, md (default), lg – pohodlné pro prst i myš.
+          sm, md (default), lg — comfortable for both finger and mouse.
         </p>
         <div className="flex flex-wrap items-center gap-4">
           <Button variant="primary" size="sm">Small</Button>
