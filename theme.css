@@ -1,0 +1,34 @@
+/**
+ * Career Design System – theme for Tailwind v4.
+ * V aplikaci: @import "tailwindcss"; @import "@career/design-system/theme.css";
+ */
+@theme {
+  --color-ds-text-primary: #050316;
+  --color-ds-text-secondary: #374151;
+  --color-ds-text-muted: #6b7280;
+  --color-ds-text-tertiary: #9ca3af;
+  --color-ds-on-dark: #f9fafb;
+  --color-ds-on-dark-muted: #e5e7eb;
+  --color-ds-surface-base: #f8f7ff;
+  --color-ds-surface-card: #ffffff;
+  --color-ds-surface-card-soft: #f3e8ff;
+  --color-ds-surface-page: #d8b4fe;
+  --color-ds-ui-bg: #f8f7ff;
+  --color-ds-ui-border: #e8e4f2;
+  --color-ds-surface-dark: #1a1625;
+  --color-ds-surface-card-dark: #1a1625;
+  --color-ds-border-subtle: #e8e4f2;
+  --color-ds-primary-strong: #a455f7;
+  --color-ds-purple-900: #6321a8;
+  --color-ds-feedback-danger: #f43f55;
+  --color-ds-score-high: #34d399;
+  --color-ds-score-medium: #fbbf24;
+  --color-ds-score-low: #f43f55;
+  --color-ds-accent-pink-soft: #fce7f3;
+  --color-ds-accent-green-soft: #e0fcf6;
+  --color-ds-accent-blue-soft: #e0f0ff;
+
+  --shadow-ds-diffuse-sm: 0 0 20px rgba(0, 0, 0, 0.08), 0 0 40px rgba(0, 0, 0, 0.05);
+  --shadow-ds-diffuse-md: 0 0 24px rgba(0, 0, 0, 0.1), 0 0 48px rgba(0, 0, 0, 0.06);
+  --shadow-ds-diffuse-lg: 0 0 32px rgba(0, 0, 0, 0.12), 0 0 64px rgba(0, 0, 0, 0.07);
+}
