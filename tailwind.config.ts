@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-/** Theme je v praxi v app/globals.css (@theme). Config slouží jen pro content paths; bez importů z tokens (Next/PostCSS config loader je nenačítá). */
+/** @theme pro ds-* je v theme.css (import z app/globals.css). Tento config jen content paths; bez importů z tokens. */
 const config: Config = {
   content: [
     "./app/**/*.{ts,tsx}",

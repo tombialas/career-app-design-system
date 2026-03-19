@@ -55,7 +55,7 @@ The app must load the DS theme so `ds-*` utilities resolve. In your global CSS (
 
 Load **Figtree** the same way as in the DS app (e.g. `next/font/google`).
 
-**Note:** `theme.css` is the consumer contract. When adding new design tokens used by components, update `theme.css` and keep `app/globals.css` in the DS repo aligned for the docs site.
+**Single source of truth:** All `@theme { … }` tokens for `ds-*` live in **`theme.css`** at the package root. The DS docs site’s `app/globals.css` only imports `../theme.css` plus docs-only styles (fonts, accordion keyframes) — it does **not** duplicate the theme block. After changing tokens, run `npm run verify:theme` (heuristic coverage check).
 
 ## 4. Tokens (JS/TS)
 

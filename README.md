@@ -32,7 +32,7 @@ Pin a **commit SHA** or **tag** for reproducible builds.
 ## Health check (maintainers)
 
 ```bash
-npm run verify:exports
+npm run verify
 ```
 
-Ensures every `package.json` export path exists on disk.
+Runs `verify:exports` (every `package.json` export exists) and `verify:theme` (heuristic: `ds-*` utilities / `var(--*ds*)` in `components/` + `app/` have a matching custom property in `theme.css`).

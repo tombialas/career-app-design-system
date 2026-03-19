@@ -68,7 +68,9 @@
     "start": "next start",
     "lint": "next lint",
     "verify:exports": "node scripts/verify-exports.mjs",
-    "prepublishOnly": "node scripts/verify-exports.mjs"
+    "verify:theme": "node scripts/verify-theme-coverage.mjs",
+    "verify": "npm run verify:exports && npm run verify:theme",
+    "prepublishOnly": "npm run verify"
   },
   "keywords": [],
   "author": "",

@@ -1,8 +1,10 @@
 /**
- * Career Design System – theme for Tailwind v4.
- * V aplikaci: @import "tailwindcss"; @import "@career/design-system/theme.css";
+ * Career Design System — single source of truth for Tailwind v4 @theme.
+ * Consumers: @import "tailwindcss"; @import "@career/design-system/theme.css";
+ * Docs site: app/globals.css imports this file — do not duplicate this block there.
  */
 @theme {
+  /* Colors (ds-*) */
   --color-ds-text-primary: #050316;
   --color-ds-text-secondary: #374151;
   --color-ds-text-muted: #6b7280;
@@ -12,23 +14,98 @@
   --color-ds-surface-base: #f8f7ff;
   --color-ds-surface-card: #ffffff;
   --color-ds-surface-card-soft: #f3e8ff;
-  --color-ds-surface-page: #d8b4fe;
-  --color-ds-ui-bg: #f8f7ff;
-  --color-ds-ui-border: #e8e4f2;
+  /** Page background — very subtle neutral (not oversaturated purple). */
+  --color-ds-surface-page: #f9f8fc;
   --color-ds-surface-dark: #1a1625;
+  /** Dark sidebar (app screens). Same as ds-surface-dark. */
   --color-ds-surface-card-dark: #1a1625;
   --color-ds-border-subtle: #e8e4f2;
+  /** Main content box background (light lavender). */
+  --color-ds-ui-bg: #f8f7ff;
+  /** ui-bg box border. */
+  --color-ds-ui-border: #e8e4f2;
+  --color-ds-primary-base: #d8b4fe;
+  --color-ds-primary-soft: #faf5ff;
   --color-ds-primary-strong: #a455f7;
+  --color-ds-on-primary: #ffffff;
   --color-ds-purple-900: #6321a8;
   --color-ds-feedback-danger: #f43f55;
-  --color-ds-score-high: #34d399;
-  --color-ds-score-medium: #fbbf24;
-  --color-ds-score-low: #f43f55;
+  --color-ds-red-500: #fda4af;
+  --color-ds-red-900: #be1227;
+  --color-ds-red-100: #fff1f3;
+  /* Accent mint */
+  --color-ds-accent-mint-base: #99f6e4;
+  --color-ds-accent-mint-soft: #e0fcf6;
+  --color-ds-accent-mint-strong: #2dd4b4;
+  /* Accent blue */
+  --color-ds-accent-blue-base: #93c5fd;
+  --color-ds-accent-blue-soft: #dbecfe;
+  --color-ds-accent-blue-strong: #3b93f6;
+  /* Reference accents (soft pink, green — cards, pills) */
   --color-ds-accent-pink-soft: #fce7f3;
   --color-ds-accent-green-soft: #e0fcf6;
-  --color-ds-accent-blue-soft: #e0f0ff;
+  /* Score (0–100 bands) */
+  --color-ds-score-high: #34d399;
+  --color-ds-score-high-soft: #f0fdf4;
+  --color-ds-score-medium: #fbbf24;
+  --color-ds-score-medium-soft: #fffbeb;
+  --color-ds-score-low: #f43f55;
+  --color-ds-score-low-soft: #fff1f3;
+  /* Surface dark (secondary button, dark chip) */
+  --color-ds-surface-dark-element: #2d293b;
+  /* Language chip (yellow accent) */
+  --color-ds-yellow-100: #fffbeb;
+  --color-ds-yellow-500: #fde68a;
+  --color-ds-yellow-700: #fbbf24;
+  --color-ds-yellow-900: #92400e;
+  /* Chip palettes (Figma: bg 500, border 700, text 900) */
+  --color-ds-green-500: #a7f3d0;
+  --color-ds-green-700: #34d399;
+  --color-ds-green-900: #065f46;
+  --color-ds-red-700: #f43f55;
+  --color-ds-purple-500: #d8b4fe;
+  --color-ds-purple-700: #a455f7;
+  --color-ds-mint-500: #99f6e4;
+  --color-ds-mint-700: #2dd4b4;
+  --color-ds-mint-900: #0d947a;
+  --color-ds-blue-500: #93c5fd;
+  --color-ds-blue-700: #3b93f6;
+  --color-ds-blue-900: #1e518a;
 
+  /* Shadows (diffuse) */
   --shadow-ds-diffuse-sm: 0 0 20px rgba(0, 0, 0, 0.08), 0 0 40px rgba(0, 0, 0, 0.05);
   --shadow-ds-diffuse-md: 0 0 24px rgba(0, 0, 0, 0.1), 0 0 48px rgba(0, 0, 0, 0.06);
   --shadow-ds-diffuse-lg: 0 0 32px rgba(0, 0, 0, 0.12), 0 0 64px rgba(0, 0, 0, 0.07);
+
+  /* Motion: duration + easing */
+  --duration-ds-fast: 150ms;
+  --duration-ds-normal: 250ms;
+  --duration-ds-slow: 400ms;
+  --ease-ds-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-ds-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-ds-linear: linear;
+
+  /* Z-Index */
+  --z-ds-base: 0;
+  --z-ds-above: 10;
+  --z-ds-overlay: 40;
+  --z-ds-dropdown: 50;
+  --z-ds-modal: 100;
+  --z-ds-toast: 200;
+  --z-ds-max: 9999;
+
+  /* Border / stroke width */
+  --border-width-ds-thin: 1px;
+  --border-width-ds-default: 1px;
+  --border-width-ds-medium: 2px;
+  --border-width-ds-thick: 4px;
+
+  /**
+   * Nested chrome (tabs, segmented controls): outer radius = inner radius + track padding.
+   */
+  --radius-ds-nested-inner: 0.75rem;
+  --spacing-ds-tab-track-pad: 0.25rem;
+  --radius-ds-nested-outer: calc(
+    var(--radius-ds-nested-inner) + var(--spacing-ds-tab-track-pad)
+  );
 }

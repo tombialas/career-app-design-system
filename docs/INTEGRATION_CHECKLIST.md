@@ -6,7 +6,7 @@ Use this to get to a **production-safe** wire from GitHub → `career-app-mvp`.
 
 - [ ] **`npm run verify:exports`** passes on `main` (CI or pre-push).
 - [ ] **`package.json` `exports`** point to real files under `components/` / `tokens/` (no stale flat paths).
-- [ ] **`theme.css`** stays aligned with DS visual contract (colors, shadows, motion vars used by `ds-*` classes). If `app/globals.css` gains new `--*` tokens, mirror critical ones into `theme.css` for consumers.
+- [ ] **`theme.css`** is the only `@theme` source for `ds-*` (docs site imports it; no duplicate block in `app/globals.css`). Run `npm run verify:theme` in the DS repo when changing tokens or utilities.
 - [ ] **Versioning:** tag releases (`v1.0.1`) or pin app to commit SHA; avoid silent `main` drift for production.
 
 ## B. Career App (`career-app-mvp`)

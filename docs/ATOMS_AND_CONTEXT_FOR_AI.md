@@ -42,7 +42,7 @@ Tento soubor shrnuje, **co je v Career Design Systemu hotové**: hlavní atomy (
   `ds-feedback-danger`
 - **Stíny:** `shadow-ds-diffuse-sm`, `shadow-ds-diffuse-md`, `shadow-ds-diffuse-lg`
 - **Font:** Figtree (`--font-figtree`)
-- Definice: `app/globals.css` a `theme.css` (blok `@theme`), volitelně `tokens/*.ts`
+- Definice: **`theme.css`** (jediný `@theme` pro `ds-*`); `app/globals.css` jen importuje `theme.css` + docs-only. Volitelně `tokens/*.ts`.
 
 ---
 

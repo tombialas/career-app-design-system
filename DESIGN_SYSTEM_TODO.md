@@ -55,7 +55,7 @@ Cíl: **kompletní DS před migrací** do career-app (layout, sidebar, karty, gr
 
 ## Technické poznámky
 
-- **Tailwind v4:** Theme v `app/globals.css` a v `theme.css`. Nové barvy/stíny/motion doplň i do `tokens/*.ts`.
+- **Tailwind v4:** Theme pouze v **`theme.css`**; `app/globals.css` importuje ten soubor. Nové barvy/stíny/motion doplň i do `tokens/*.ts`. `npm run verify:theme`.
 - **Kontrola:** Po změnách ověř na localhost:3001 (Button, Input, Tokens, nové komponenty).
 
 ---
