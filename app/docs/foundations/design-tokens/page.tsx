@@ -263,6 +263,12 @@ function GuardrailsTab() {
         <ul className="list-inside list-disc space-y-1 text-sm text-ds-text-secondary">
           <li>Strictly enforce the 8pt grid rhythm for spacing decisions.</li>
           <li>Interactive elements must default to `rounded-full` (pill) or `rounded-3xl` to preserve brand geometry.</li>
+          <li>
+            <strong>Nested track + thumb</strong> (tabs, segmented control): outer radius must equal inner radius + track padding — CSS{" "}
+            <code className="rounded bg-ds-surface-card-soft px-1 py-0.5 font-mono text-xs">--radius-ds-nested-outer</code> ={" "}
+            <code className="rounded bg-ds-surface-card-soft px-1 py-0.5 font-mono text-xs">calc(inner + --spacing-ds-tab-track-pad)</code>
+            . See <code className="rounded bg-ds-surface-card-soft px-1 py-0.5 font-mono text-xs">nestedTabChromeTokens</code> in layout tokens.
+          </li>
           <li>Do not fallback to generic radius defaults (`rounded-md`) when DS geometry is defined.</li>
         </ul>
       </div>

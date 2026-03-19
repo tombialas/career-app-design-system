@@ -30,6 +30,18 @@ export const radiusTokens = {
   pill: 9999,
 } as const;
 
+/**
+ * Nested UI track (tabs, segment control): concentric corners.
+ * Rule: R_outer = R_inner + trackPadding (same axis). Implemented in CSS as
+ * `--radius-ds-nested-outer: calc(var(--radius-ds-nested-inner) + var(--spacing-ds-tab-track-pad))`.
+ * Tailwind: inner `rounded-[var(--radius-ds-nested-inner)]`, outer `rounded-[var(--radius-ds-nested-outer)]`.
+ */
+export const nestedTabChromeTokens = {
+  innerRadiusPx: radiusTokens.md,
+  trackPaddingPx: spacingTokens[1],
+  outerRadiusPx: radiusTokens.md + spacingTokens[1],
+} as const;
+
 /** Elevation (box-shadow). Flat, card, modal. */
 export const elevationTokens = {
   none: "none",

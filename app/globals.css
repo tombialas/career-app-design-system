@@ -97,6 +97,16 @@
   --border-width-ds-default: 1px;
   --border-width-ds-medium: 2px;
   --border-width-ds-thick: 4px;
+
+  /**
+   * Nested chrome (tabs, segmented controls): outer radius = inner radius + track padding.
+   * TabsList uses padding = --spacing-ds-tab-track-pad; triggers + sliding pill use --radius-ds-nested-inner.
+   */
+  --radius-ds-nested-inner: 0.75rem; /* 12px — aligned with radius.md token */
+  --spacing-ds-tab-track-pad: 0.25rem; /* 4px — must match TabsList padding */
+  --radius-ds-nested-outer: calc(
+    var(--radius-ds-nested-inner) + var(--spacing-ds-tab-track-pad)
+  );
 }
 
 html,

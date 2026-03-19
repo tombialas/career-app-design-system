@@ -3,7 +3,17 @@
 import * as React from "react";
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 
-const TabsRoot = TabsPrimitive.Root;
+const TabsRoot = React.forwardRef<
+  React.ComponentRef<typeof TabsPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root>
+>(({ className = "", ...props }, ref) => (
+  <TabsPrimitive.Root
+    ref={ref}
+    className={`w-full min-w-0 ${className}`.trim()}
+    {...props}
+  />
+));
+TabsRoot.displayName = "TabsRoot";
 
 const TabsList = React.forwardRef<
   React.ComponentRef<typeof TabsPrimitive.List>,
@@ -11,7 +21,7 @@ const TabsList = React.forwardRef<
 >(({ className = "", children, ...props }, ref) => {
   const listRef = React.useRef<HTMLDivElement>(null);
   const rafIdRef = React.useRef<number | null>(null);
-  const [indicator, setIndicator] = React.useState({ left: 0, width: 0 });
+  const [indicator, setIndicator] = React.useState({ left: 0, top: 0, width: 0, height: 0 });
 
   const updateIndicator = React.useCallback(() => {
     const list = listRef.current;
@@ -22,8 +32,14 @@ const TabsList = React.forwardRef<
     const listRect = list.getBoundingClientRect();
     const activeRect = active.getBoundingClientRect();
     const left = activeRect.left - listRect.left + list.scrollLeft;
+    const top = activeRect.top - listRect.top + list.scrollTop;
     const width = activeRect.width;
-    setIndicator((prev) => (prev.left === left && prev.width === width ? prev : { left, width }));
+    const height = activeRect.height;
+    setIndicator((prev) =>
+      prev.left === left && prev.top === top && prev.width === width && prev.height === height
+        ? prev
+        : { left, top, width, height },
+    );
   }, []);
 
   // Initial mount: set indicator sync so the pill is visible (otherwise it stays width: 0).
@@ -36,8 +52,10 @@ const TabsList = React.forwardRef<
         const listRect = list.getBoundingClientRect();
         const activeRect = active.getBoundingClientRect();
         const left = activeRect.left - listRect.left + list.scrollLeft;
+        const top = activeRect.top - listRect.top + list.scrollTop;
         const width = activeRect.width;
-        setIndicator((prev) => (prev.width === 0 ? { left, width } : prev));
+        const height = activeRect.height;
+        setIndicator((prev) => (prev.width === 0 ? { left, top, width, height } : prev));
       }
     }
     const raf1 = requestAnimationFrame(() => {
@@ -68,20 +86,20 @@ const TabsList = React.forwardRef<
     <TabsPrimitive.List
       ref={mergedRef}
       className={`
-        relative inline-flex h-10 w-fit items-center justify-center rounded-full border border-ds-border-subtle bg-ds-surface-base p-1
-        text-ds-text-muted
+        relative box-border flex w-fit max-w-full min-h-0 min-w-0 flex-wrap items-center justify-start
+        gap-[var(--spacing-ds-tab-track-pad)] rounded-[var(--radius-ds-nested-outer)] border border-ds-border-subtle bg-ds-surface-base
+        p-[var(--spacing-ds-tab-track-pad)] text-ds-text-muted
         ${className}
       `.trim()}
       {...props}
     >
       <span
         aria-hidden
-        className="pointer-events-none absolute inset-y-1 left-0 z-[1] will-change-[transform,width] rounded-full bg-ds-surface-card shadow-ds-diffuse-sm transition-[transform,width] duration-[var(--duration-ds-normal)] ease-[var(--ease-ds-out)]"
+        className="pointer-events-none absolute left-0 top-0 z-[1] will-change-[transform,width,height] rounded-[var(--radius-ds-nested-inner)] bg-ds-surface-card shadow-ds-diffuse-sm transition-[transform,width,height] duration-[var(--duration-ds-normal)] ease-[var(--ease-ds-out)]"
         style={{
-          transform: `translateX(${indicator.left}px)`,
+          transform: `translate3d(${indicator.left}px, ${indicator.top}px, 0)`,
           width: indicator.width,
-          top: 4,
-          bottom: 4,
+          height: indicator.height,
         }}
       />
       {children}
@@ -97,7 +115,7 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={`
-      relative z-10 inline-flex items-center justify-center whitespace-nowrap rounded-full px-3 py-1.5 text-sm font-medium
+      relative z-10 inline-flex min-h-9 min-w-0 max-w-full shrink-0 items-center justify-center break-words whitespace-normal rounded-[var(--radius-ds-nested-inner)] px-3 py-1.5 text-center text-sm font-medium leading-snug [overflow-wrap:anywhere] sm:whitespace-nowrap
       text-ds-text-muted transition-colors
       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ds-primary-strong focus-visible:ring-offset-2
       disabled:pointer-events-none disabled:opacity-50

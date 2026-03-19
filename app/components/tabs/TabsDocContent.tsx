@@ -61,12 +61,14 @@ export default function TabsDocContent() {
         <div className="text-sm text-ds-text-secondary">
           <ul className="list-inside list-disc space-y-1">
             <li>
-              <strong>TabsList:</strong> rounded-lg, bg-ds-surface-card-soft/60,
-              p-1, inline-flex
+              <strong>TabsList:</strong> <code className="rounded bg-ds-surface-card-soft/70 px-1 text-xs">rounded-[var(--radius-ds-nested-outer)]</code>{" "}
+              (= inner <code className="rounded bg-ds-surface-card-soft/70 px-1 text-xs">--radius-ds-nested-inner</code> + track pad{" "}
+              <code className="rounded bg-ds-surface-card-soft/70 px-1 text-xs">--spacing-ds-tab-track-pad</code>),{" "}
+              <code className="rounded bg-ds-surface-card-soft/70 px-1 text-xs">p-[var(--spacing-ds-tab-track-pad)]</code>,{" "}
+              <code className="rounded bg-ds-surface-card-soft/70 px-1 text-xs">w-fit max-w-full flex flex-wrap justify-start</code>, bg track token
             </li>
             <li>
-              <strong>TabsTrigger:</strong> data-[state=active] bg-ds-surface-card,
-              shadow-ds-diffuse-sm, focus-visible ring
+              <strong>TabsTrigger:</strong> <code className="rounded bg-ds-surface-card-soft/70 px-1 text-xs">rounded-[var(--radius-ds-nested-inner)]</code>, sliding pill matches trigger box; data-[state=active] styling via indicator; focus-visible ring
             </li>
             <li>
               <strong>TabsContent:</strong> mt-3, hidden when inactive

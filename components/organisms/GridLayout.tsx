@@ -105,6 +105,7 @@ export function GridCol({
   return (
     <div
       className={`
+        min-w-0
         ${colSpanClasses[base as keyof typeof colSpanClasses]}
         ${mdColSpanClasses[md as keyof typeof mdColSpanClasses]}
         ${lgColSpanClasses[lg as keyof typeof lgColSpanClasses]}
