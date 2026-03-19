@@ -1,16 +1,24 @@
 # Using the Design System in Career App
 
-Až budeš mít aplikaci (Next.js / Vite / …) v repu vedle `career-design-system`, použij DS takto.
+Target host: **Next.js 16+** with **Tailwind CSS v4** and **React 18/19**. See also [`INTEGRATION_CHECKLIST.md`](./INTEGRATION_CHECKLIST.md).
 
-## 1. Závislost
+## 1. Dependency
 
-V projektu aplikace (např. `04_Career_App_Produkt` nebo nový Next app):
+### From GitHub (recommended for `career-app-mvp`)
+
+```bash
+npm install github:tombialas/career-app-design-system#main
+```
+
+Pin a **tag** or **commit SHA** instead of `#main` for reproducible builds.
+
+### Local monorepo / adjacent folder
 
 ```bash
 npm install ../career-design-system
 ```
 
-Nebo v `package.json`:
+Or in `package.json`:
 
 ```json
 {
@@ -20,32 +28,47 @@ Nebo v `package.json`:
 }
 ```
 
-Potom `npm install`.
+Then `npm install`.
 
-## 2. Theme (Tailwind v4)
+## 2. Next.js — transpile the package
 
-Aplikace musí načíst náš theme, aby třídy `ds-*` fungovaly. V hlavním CSS souboru (např. `app/globals.css`):
+Git-installed packages are often pre-transpiled by Next, but enabling this avoids surprises:
+
+```ts
+// next.config.ts
+const nextConfig = {
+  transpilePackages: ["@career/design-system"],
+};
+export default nextConfig;
+```
+
+## 3. Theme (Tailwind v4)
+
+The app must load the DS theme so `ds-*` utilities resolve. In your global CSS (e.g. `app/globals.css`):
 
 ```css
 @import "tailwindcss";
 @import "@career/design-system/theme.css";
 
-/* zbytek tvého CSS */
+/* rest of your app CSS */
 ```
 
-Tím se v projektu objeví barvy (`bg-ds-surface-dark`, `text-ds-text-primary`, …) a stíny (`shadow-ds-diffuse-sm`, …).
+Load **Figtree** the same way as in the DS app (e.g. `next/font/google`).
 
-## 3. Tokeny (JS/TS)
+**Note:** `theme.css` is the consumer contract. When adding new design tokens used by components, update `theme.css` and keep `app/globals.css` in the DS repo aligned for the docs site.
 
-Kde potřebuješ hodnoty v kódu (např. pro inline styly nebo konfiguraci):
+## 4. Tokens (JS/TS)
 
 ```ts
 import { colorTokens } from "@career/design-system/tokens/colors";
 import { spacingTokens, radiusTokens } from "@career/design-system/tokens/layout";
 import { typographyTokens } from "@career/design-system/tokens/typography";
+import { durationTokens, easingTokens } from "@career/design-system/tokens/motion";
 ```
 
-## 4. Komponenty
+## 5. Components
+
+Stable subpath exports (see `package.json` → `"exports"`):
 
 ```tsx
 import { Button } from "@career/design-system/components/Button";
@@ -66,16 +89,30 @@ import { AppShell } from "@career/design-system/components/AppShell";
 import { Sidebar } from "@career/design-system/components/Sidebar";
 import { Container } from "@career/design-system/components/Container";
 import { ListItem } from "@career/design-system/components/ListItem";
+import { Modal } from "@career/design-system/components/Modal";
+import { Select } from "@career/design-system/components/Select";
+import { Textarea } from "@career/design-system/components/Textarea";
+import { Checkbox } from "@career/design-system/components/Checkbox";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@career/design-system/components/Accordion";
+import { Popover, PopoverTrigger, PopoverContent } from "@career/design-system/components/Popover";
+import { Grid, GridCol } from "@career/design-system/components/GridLayout";
+import { FormField } from "@career/design-system/components/FormField";
+import { EmptyState } from "@career/design-system/components/EmptyState";
+import { SkillBadge } from "@career/design-system/components/SkillBadge";
 ```
 
-Komponenty používají třídy `ds-*`, takže v aplikaci musí být načtený theme (krok 2). Font Figtree si v aplikaci načti stejně jako v DS (např. `next/font/google`).
+`DocSearch` is available for **Next.js** hosts only (`next/navigation`):
 
-## 5. Shrnutí
+```tsx
+import { DocSearch } from "@career/design-system/components/DocSearch";
+```
 
-| Co | Jak |
-|----|-----|
-| Barvy, stíny v UI | Theme v CSS (`@import "@career/design-system/theme.css"`) |
-| Hodnoty v kódu | Import z `@career/design-system/tokens/*` |
-| Button, Chip, Input | Import z `@career/design-system/components/*` |
+Run **`npm run verify:exports`** in the DS repo after changing exports.
 
-Při přidání nových barev nebo stínů v DS doplň je i do `theme.css` a do `app/globals.css` (dokumentační web), aby zůstaly v sync.
+## 6. Summary
+
+| Need | How |
+|------|-----|
+| Colors / shadows in UI | `@import "@career/design-system/theme.css"` |
+| Values in code | `@career/design-system/tokens/*` |
+| UI primitives | `@career/design-system/components/*` |
