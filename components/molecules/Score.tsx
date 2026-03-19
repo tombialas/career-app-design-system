@@ -6,11 +6,19 @@ import { AlertTriangle, CircleDashed, Sparkles } from "lucide-react";
 
 export type ScoreBand = "low" | "medium" | "high";
 
-/** Score band: 0–33 low, 34–66 medium, 67–100 high */
-export function getScoreBand(value: number): ScoreBand {
+/**
+ * Score band (default DS: low &lt; 34, medium &lt; 67, high ≥ 67).
+ * Optional `bandThresholds` e.g. `{ mediumFrom: 50, highFrom: 80 }` for legacy card coloring (red / amber / green).
+ */
+export function getScoreBand(
+  value: number,
+  bandThresholds?: { mediumFrom: number; highFrom: number }
+): ScoreBand {
   const v = Math.max(0, Math.min(100, value));
-  if (v <= 33) return "low";
-  if (v <= 66) return "medium";
+  const mediumFrom = bandThresholds?.mediumFrom ?? 34;
+  const highFrom = bandThresholds?.highFrom ?? 67;
+  if (v < mediumFrom) return "low";
+  if (v < highFrom) return "medium";
   return "high";
 }
 
@@ -53,6 +61,8 @@ type ScoreProps = {
   className?: string;
   /** For halfDonut: show the value next to it. For circle: the number is always rendered in the center. */
   showValue?: boolean;
+  /** Override band splits (defaults: mediumFrom 34, highFrom 67). */
+  bandThresholds?: { mediumFrom: number; highFrom: number };
 };
 
 /** Half-donut: bottom semicircle. Path and viewBox follow the spec. */
@@ -121,8 +131,9 @@ export function Score({
   size = SCORE_DEFAULT_SIZE,
   className = "",
   showValue = false,
+  bandThresholds,
 }: ScoreProps) {
-  const band = getScoreBand(value);
+  const band = getScoreBand(value, bandThresholds);
   const trackClass = scoreTrackClass[band];
   const fillClass = scoreFillClass[band];
   const textClass = scoreTextClass[band];
