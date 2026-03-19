@@ -1,103 +1,116 @@
 import Link from "next/link";
-import { Card } from "../components/organisms/Card";
+import { Component, Palette, Type, Compass, Box, Blocks, LayoutGrid, Shapes } from "lucide-react";
+import { docsIndex } from "../config/docsIndex";
+import { DocSearch } from "../components/molecules/DocSearch";
+import { ComponentShowcase } from "./_components/ComponentShowcase";
 
-export default function OverviewPage() {
+const quickLinks: Array<{ href: string; label: string; description: string; icon: React.ReactNode }> = [
+  { href: "/docs/foundations/design-tokens", label: "Design Tokens", description: "Colors, type, layout, motion", icon: <Component className="h-5 w-5" /> },
+  { href: "/docs/foundations/colors", label: "Colors", description: "Palettes and semantic roles", icon: <Palette className="h-5 w-5" /> },
+  { href: "/docs/foundations/typography", label: "Typography", description: "Figtree font system and rules", icon: <Type className="h-5 w-5" /> },
+  { href: "/docs/brand/mission-vision", label: "Brand", description: "Mission, vision, tone of voice", icon: <Compass className="h-5 w-5" /> },
+];
+
+const componentLinks: Array<{ href: string; label: string; count: string; icon: React.ReactNode }> = [
+  { href: "/docs/atoms", label: "Atoms", count: "6 components", icon: <Box className="h-4 w-4" /> },
+  { href: "/docs/molecules", label: "Molecules", count: "11 components", icon: <Blocks className="h-4 w-4" /> },
+  { href: "/docs/organisms", label: "Organisms", count: "9 components", icon: <LayoutGrid className="h-4 w-4" /> },
+  { href: "/docs/patterns", label: "Patterns", count: "3 patterns", icon: <Shapes className="h-4 w-4" /> },
+];
+
+export default function HomePage() {
   return (
-    <div className="space-y-10">
-      <header className="space-y-3">
-        <div className="flex items-end justify-between gap-6">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">
-              Career App · Design System
-            </p>
-            <h1 className="mt-2 text-3xl font-semibold tracking-tight text-ds-text-primary">
-              Overview
-            </h1>
-          </div>
-          <div className="hidden items-center gap-2 sm:flex">
-            <Link href="/tokens" className="text-sm font-medium text-ds-text-secondary hover:text-ds-text-primary">
-              Tokens
-            </Link>
-            <span className="text-ds-border-subtle">/</span>
-            <Link
-              href="/components/buttons"
-              className="text-sm font-medium text-ds-text-secondary hover:text-ds-text-primary"
-            >
-              Components
-            </Link>
-          </div>
+    <div className="space-y-14">
+      {/* Hero */}
+      <header className="space-y-6 pt-4">
+        <div className="space-y-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ds-text-muted">
+            Career App · Design System
+          </p>
+          <h1 className="text-4xl font-semibold tracking-tight text-ds-text-primary lg:text-5xl">
+            Build with purpose.
+          </h1>
+          <p className="max-w-2xl text-[16px] leading-relaxed text-ds-text-secondary">
+            Tokens, components, and patterns for Career App. One system, one source of truth —
+            from brand identity to production-ready UI.
+          </p>
         </div>
-        <p className="max-w-3xl text-[16px] leading-relaxed text-ds-text-secondary">
-          Everything you need for UI in the Career App: tokens, primitives, and patterns. In the app:{" "}
-          <code className="rounded bg-ds-surface-card-soft/70 px-1 text-sm">
-            docs/USING_IN_APP.md
-          </code>
-          .
-        </p>
+        <div className="max-w-xl">
+          <DocSearch entries={docsIndex} />
+        </div>
       </header>
 
-      <section aria-label="Bento">
-        <div className="grid grid-cols-12 gap-4 lg:gap-5">
-          <Link href="/components/buttons" className="col-span-12 lg:col-span-7">
-            <Card hoverable className="h-full">
-              <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">
-                Start here
-              </p>
-              <h2 className="mt-2 text-xl font-semibold text-ds-text-primary">
-                Components
-              </h2>
-              <p className="mt-2 text-sm leading-relaxed text-ds-text-secondary">
-                Primitives and patterns (Button, Tabs, Card, Toast, Score…). Clear API, specs, and documentation pages.
-              </p>
-            </Card>
-          </Link>
-
-          <Link href="/tokens" className="col-span-12 lg:col-span-5">
-            <Card hoverable variant="highlightBlue" className="h-full">
-              <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">
-                Foundation
-              </p>
-              <h2 className="mt-2 text-xl font-semibold text-ds-text-primary">
-                Tokens
-              </h2>
-              <p className="mt-2 text-sm leading-relaxed text-ds-text-secondary">
-                Colors, spacing, radius, elevation, typography. Always via semantic `ds-*`.
-              </p>
-            </Card>
-          </Link>
-
-          <Card variant="soft" className="col-span-12 lg:col-span-6">
-            <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">
-              Principles
-            </p>
-            <ul className="mt-3 space-y-2 text-sm text-ds-text-secondary">
-              <li>
-                <strong>Playful.</strong> Friendly, light, human—like a reference. No stiff corporate look.
-              </li>
-              <li>Linear hierarchy: short headings, minimal decoration.</li>
-              <li>Surface = border + blur; shadows only as subtle depth.</li>
-              <li>Pills and rounded-3xl for main interactions.</li>
-            </ul>
-          </Card>
-
-          <Link href="/docs/patterns" className="col-span-12 lg:col-span-6">
-            <Card hoverable variant="soft" className="h-full">
-              <p className="text-xs font-semibold uppercase tracking-wider text-ds-text-muted">
-                Patterns
-              </p>
-              <h2 className="mt-2 text-xl font-semibold text-ds-text-primary">
-                Match score cards & badges
-              </h2>
-              <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-ds-text-secondary">
-                <span className="rounded-full bg-ds-surface-card-soft/70 px-3 py-1">Match score card</span>
-                <span className="rounded-full bg-ds-surface-card-soft/70 px-3 py-1">Score badge</span>
-                <span className="rounded-full bg-ds-surface-card-soft/70 px-3 py-1">Skill badge</span>
+      {/* Quick links — foundations & brand */}
+      <section className="space-y-5">
+        <h2 className="text-xl font-semibold tracking-tight text-ds-text-primary">
+          Foundations
+        </h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {quickLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="group flex items-start gap-3 rounded-3xl border border-ds-border-subtle bg-ds-surface-card/50 p-4 transition-all duration-[var(--duration-ds-fast)] hover:border-ds-border-subtle/80 hover:shadow-ds-diffuse-md hover:-translate-y-0.5"
+            >
+              <span className="mt-0.5 shrink-0 text-ds-text-muted transition-colors group-hover:text-ds-primary-strong">
+                {link.icon}
+              </span>
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-ds-text-primary">{link.label}</p>
+                <p className="mt-0.5 text-xs text-ds-text-muted">{link.description}</p>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-ds-text-secondary">
-                How cards and badges look in the app: applications grid, detail cards, and skill tags.
-              </p>
-            </Card>
-          </Link>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Component categories */}
+      <section className="space-y-5">
+        <div className="flex items-end justify-between gap-4">
+          <h2 className="text-xl font-semibold tracking-tight text-ds-text-primary">
+            Components
+          </h2>
+          <div className="hidden items-center gap-1.5 sm:flex">
+            {componentLinks.map((cl) => (
+              <Link
+                key={cl.href}
+                href={cl.href}
+                className="inline-flex items-center gap-1.5 rounded-full border border-ds-border-subtle bg-ds-surface-card-soft/50 px-3 py-1.5 text-xs font-medium text-ds-text-secondary transition-colors hover:border-ds-primary-strong hover:text-ds-primary-strong"
+              >
+                {cl.icon}
+                {cl.label}
+                <span className="text-ds-text-muted">· {cl.count}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <ComponentShowcase />
+      </section>
+
+      {/* Design principles */}
+      <section className="space-y-5 border-t border-ds-border-subtle pt-8">
+        <h2 className="text-xl font-semibold tracking-tight text-ds-text-primary">
+          Design principles
+        </h2>
+        <div className="grid gap-4 lg:grid-cols-3">
+          <div className="space-y-2">
+            <p className="text-sm font-semibold text-ds-text-primary">Playful & human</p>
+            <p className="text-sm leading-relaxed text-ds-text-secondary">
+              Friendly and light. No stiff corporate aesthetics. Short headings, minimal decoration, warm interactions.
+            </p>
+          </div>
+          <div className="space-y-2">
+            <p className="text-sm font-semibold text-ds-text-primary">Pill geometry</p>
+            <p className="text-sm leading-relaxed text-ds-text-secondary">
+              Pills (<code className="rounded bg-ds-surface-card-soft px-1 text-xs">rounded-full</code>) and <code className="rounded bg-ds-surface-card-soft px-1 text-xs">rounded-3xl</code> for all interactive elements. 8pt grid rhythm.
+            </p>
+          </div>
+          <div className="space-y-2">
+            <p className="text-sm font-semibold text-ds-text-primary">Snappy motion</p>
+            <p className="text-sm leading-relaxed text-ds-text-secondary">
+              Never exceed 300ms for common interactions. Surface = border + blur; shadows as subtle depth only.
+            </p>
+          </div>
         </div>
       </section>
     </div>

@@ -102,6 +102,30 @@ export default function LayoutDocContent() {
         </p>
       </section>
 
+      {/* 4.1 Responsive behavior */}
+      <section>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Breakpoints & behavior</h2>
+        <p className="mb-4 text-sm text-ds-text-secondary">
+          Our responsive switch is intentionally simple: we key behavior off <strong>Tailwind `lg`</strong>.
+        </p>
+        <div className="rounded-xl border border-ds-border-subtle bg-ds-surface-card-soft/40 p-4">
+          <ul className="list-inside list-disc space-y-1 text-sm text-ds-text-secondary">
+            <li>
+              <strong>Desktop (&gt;= `lg`, ~1024px and up)</strong>: use <strong>inline</strong> sidebar inside a sticky wrapper.
+            </li>
+            <li>
+              <strong>Mobile / Tablet (&lt; `lg`, below ~1024px)</strong>: use <strong>drawer</strong> sidebar with a hamburger trigger; content remains in the main scroll area.
+            </li>
+            <li>
+              <strong>Spacing</strong>: page padding typically follows <code className="rounded bg-ds-surface-card-soft px-1">px-4</code> (mobile) and <code className="rounded bg-ds-surface-card-soft px-1">lg:px-8</code> (desktop).
+            </li>
+            <li>
+              <strong>Grid</strong>: keep card/layout structure stable; only adjust column count and padding at breakpoints (see <strong>Grid</strong> token guidance).
+            </li>
+          </ul>
+        </div>
+      </section>
+
       {/* 5. When to use what */}
       <section>
         <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">

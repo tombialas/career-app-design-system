@@ -63,6 +63,26 @@ export default function AppShellDocContent() {
           </div>
         </Card>
       </section>
+
+      <section>
+        <h2 className="mb-2 text-xl font-semibold text-ds-text-primary">Responsive layout behavior</h2>
+        <Card className="space-y-3 p-6">
+          <ul className="list-inside list-disc space-y-1 text-sm text-ds-text-secondary">
+            <li>
+              <strong>AppShell height</strong>: always full-screen via <code className="rounded bg-ds-surface-card-soft/70 px-1">h-screen</code>.
+            </li>
+            <li>
+              <strong>Main scrolling</strong>: the <code className="rounded bg-ds-surface-card-soft/70 px-1">main</code> area scrolls (<code className="rounded bg-ds-surface-card-soft/70 px-1">overflow-y-auto</code>), the sidebar stays fixed.
+            </li>
+            <li>
+              <strong>Padding</strong> changes with breakpoints: <code className="rounded bg-ds-surface-card-soft/70 px-1">px-4</code> on mobile, <code className="rounded bg-ds-surface-card-soft/70 px-1">lg:px-8</code> on desktop.
+            </li>
+            <li>
+              <strong>Canvas vs boxed</strong>: boxed uses the floating rounded container; canvas renders content directly on the background (same responsive padding strategy).
+            </li>
+          </ul>
+        </Card>
+      </section>
     </div>
   );
 }
