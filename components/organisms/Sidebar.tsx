@@ -124,7 +124,7 @@ export function Sidebar({
           </button>
         )}
       </div>
-      <nav className="flex-1 space-y-1 overflow-y-auto px-4 pb-4" aria-label="Main">
+      <nav className="min-h-0 flex-1 space-y-1 overflow-y-auto px-4 pb-4" aria-label="Main">
         {navItems.map((item) => {
           if (isNavGroup(item)) {
             return (
@@ -146,7 +146,11 @@ export function Sidebar({
         })}
       </nav>
       {footer != null && (
-        <div className={`mt-auto px-6 pb-6 pt-4 flex flex-col gap-4 ${footerTextClass}`}>{footer}</div>
+        <div
+          className={`mt-auto flex shrink-0 flex-col gap-4 px-6 pb-8 pt-4 ${footerTextClass}`}
+        >
+          {footer}
+        </div>
       )}
     </>
   );
@@ -157,7 +161,7 @@ export function Sidebar({
     return (
       <aside
         className={`
-          flex w-64 shrink-0 flex-col
+          flex min-h-0 w-64 shrink-0 flex-col
           my-4 ml-4 lg:my-6 lg:ml-6
           h-[calc(100vh-2rem)] lg:h-[calc(100vh-3rem)]
           rounded-3xl shadow-ds-diffuse-lg
@@ -196,7 +200,7 @@ export function Sidebar({
 
       <aside
         className={`
-          fixed inset-y-0 left-0 z-[var(--z-ds-modal)] flex w-64 flex-col border-r transition-transform duration-[var(--duration-ds-slow)] ease-[var(--ease-ds-out-expo)]
+          fixed inset-y-0 left-0 z-[var(--z-ds-modal)] flex min-h-0 w-64 flex-col border-r transition-transform duration-[var(--duration-ds-slow)] ease-[var(--ease-ds-out-expo)]
           ${isDark ? "border-white/10 bg-ds-surface-card-dark" : "border-ds-border-subtle bg-ds-ui-bg"}
           shadow-ds-diffuse-md backdrop-blur-xl lg:translate-x-0 lg:shadow-none
           ${open ? "translate-x-0" : "-translate-x-full"}

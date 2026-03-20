@@ -23,11 +23,11 @@ export function AppShell({
 }: AppShellProps) {
   return (
     <div
-      className={`flex h-screen overflow-hidden bg-ds-surface-base font-[family-name:var(--font-figtree),system-ui,sans-serif] ${className}`.trim()}
+      className={`flex h-screen min-h-0 overflow-hidden bg-ds-surface-base font-[family-name:var(--font-figtree),system-ui,sans-serif] ${className}`.trim()}
     >
       {sidebar}
       {variant === "boxed" ? (
-        <main className="min-w-0 flex-1 overflow-y-auto pb-8 pt-14 lg:pt-8">
+        <main className="min-h-0 min-w-0 flex-1 overflow-y-auto pb-8 pt-14 lg:pt-8">
           {/* Floating box: odstup m-4/m-6, rounded-3xl, shadow-ds-diffuse-lg. Scrolluje main, ne box. */}
           <div className="m-4 rounded-3xl border border-ds-border-subtle bg-ds-ui-bg shadow-ds-diffuse-lg lg:m-6">
             <div className="p-4 sm:p-6 lg:p-8">
@@ -36,7 +36,7 @@ export function AppShell({
           </div>
         </main>
       ) : (
-        <main className="min-w-0 flex-1 overflow-y-auto px-4 pb-8 pt-8 lg:px-8">
+        <main className="min-h-0 min-w-0 flex-1 overflow-y-auto px-4 pb-10 pt-14 lg:px-8 lg:pb-12 lg:pt-10">
           {children}
         </main>
       )}
