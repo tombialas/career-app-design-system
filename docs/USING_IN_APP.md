@@ -107,6 +107,11 @@ import { SkillBadge } from "@career/design-system/components/SkillBadge";
 import { DocSearch } from "@career/design-system/components/DocSearch";
 ```
 
+### AppShell / Sidebar in host apps
+
+- **AppShell** (`variant="canvas"`): the flex root uses `h-screen min-h-0`; **main** uses `min-h-0 min-w-0 flex-1 overflow-y-auto` so long content scrolls inside `main`, not the document. Canvas **main** padding: `pt-14 lg:pt-10`, `pb-10 lg:pb-12`, `px-4 lg:px-8`.
+- **Sidebar**: **nav** uses `min-h-0 flex-1 overflow-y-auto`; the **footer** wrapper is `shrink-0` with **`pb-8`** under the last control so the dark panel keeps clear space above the bottom rounded edge.
+
 Run **`npm run verify:exports`** in the DS repo after changing exports.
 
 ## 6. Summary
