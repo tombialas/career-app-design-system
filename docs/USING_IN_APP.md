@@ -49,9 +49,14 @@ The app must load the DS theme so `ds-*` utilities resolve. In your global CSS (
 ```css
 @import "tailwindcss";
 @import "@career/design-system/theme.css";
+/* Tailwind v4 does not scan node_modules by default (often gitignored). Without this,
+   utilities used only inside the package (e.g. bg-ds-surface-card-dark) are not emitted. */
+@source "../node_modules/@career/design-system";
 
 /* rest of your app CSS */
 ```
+
+Set `@source` **relative to that CSS file** (e.g. from `src/app/globals.css` use `../../node_modules/@career/design-system`).
 
 Load **Figtree** the same way as in the DS app (e.g. `next/font/google`).
 
