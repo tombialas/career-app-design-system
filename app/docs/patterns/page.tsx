@@ -4,11 +4,15 @@ import { TabsNav, type TabLink } from "../_components/TabsNav";
 import FormFieldDocPage from "../../components/form-field/page";
 import SkillBadgeDocPage from "../../components/skill-badge/page";
 import EmptyStateDocPage from "../../components/empty-state/page";
+import PageHeaderDocPage from "../../components/page-header/page";
+import StatListDocPage from "../../components/stat-list/page";
 
 const tabs: TabLink[] = [
   { value: "form-field", label: "Form field" },
   { value: "skill-badge", label: "Skill badge" },
   { value: "empty-state", label: "Empty state" },
+  { value: "page-header", label: "Page header" },
+  { value: "stat-list", label: "Stat list" },
 ];
 
 export const dynamic = "force-dynamic";
@@ -33,6 +37,10 @@ export default async function PatternsDocsPage({
       <SkillBadgeDocPage />
     ) : active === "empty-state" ? (
       <EmptyStateDocPage />
+    ) : active === "page-header" ? (
+      <PageHeaderDocPage />
+    ) : active === "stat-list" ? (
+      <StatListDocPage />
     ) : (
       <FormFieldDocPage />
     );

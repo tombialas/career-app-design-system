@@ -149,12 +149,12 @@ export function DocSearch({
         />
         <kbd
           className={
-            "pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 hidden items-center gap-0.5 " +
-            "rounded-lg border border-ds-border-subtle bg-ds-surface-card-soft px-1.5 py-0.5 " +
-            "text-[10px] font-medium text-ds-text-muted sm:inline-flex"
+            "pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 hidden items-center gap-1 " +
+            "rounded-lg border border-ds-border-subtle bg-ds-surface-card-soft px-2 py-1 " +
+            "text-xs font-medium text-ds-text-muted sm:inline-flex shadow-sm"
           }
         >
-          <Command className="h-2.5 w-2.5" />K
+          <Command className="h-3 w-3" />K
         </kbd>
       </div>
 
@@ -174,14 +174,14 @@ export function DocSearch({
               }
             >
               <div className="min-w-0 flex-1">
-                <p className="truncate text-sm font-medium text-ds-text-primary">
+                <p className="truncate text-base font-medium text-ds-text-primary">
                   {entry.title}
                 </p>
-                <p className="truncate text-xs text-ds-text-muted">
+                <p className="truncate text-xs font-medium text-ds-text-muted mt-1">
                   {entry.category} · {entry.description}
                 </p>
               </div>
-              <ArrowRight className="h-3.5 w-3.5 shrink-0 text-ds-text-muted" />
+              <ArrowRight className="h-4 w-4 shrink-0 text-ds-text-muted" />
             </button>
           ))}
         </div>

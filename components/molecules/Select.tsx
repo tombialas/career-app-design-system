@@ -17,8 +17,8 @@ const SelectTrigger = React.forwardRef<
     className={`
       flex h-10 w-full items-center justify-between gap-2 rounded-full border border-ds-border-subtle
       bg-ds-surface-card px-4 text-sm text-ds-text-primary shadow-ds-diffuse-sm
-      placeholder:text-ds-text-muted
-      focus:outline-none focus:ring-2 focus:ring-ds-primary-strong focus:ring-offset-2
+      placeholder:text-ds-text-muted transition-all duration-[var(--duration-ds-normal)] ease-[var(--ease-ds-out-expo)]
+      focus:outline-none focus:ring-2 focus:ring-ds-primary-strong focus:ring-offset-2 hover:shadow-sm
       disabled:cursor-not-allowed disabled:opacity-60
       data-[placeholder]:text-ds-text-muted
       [&>span]:line-clamp-1
@@ -37,7 +37,7 @@ SelectTrigger.displayName = SelectPrimitive.Trigger.displayName;
 const SelectContent = React.forwardRef<
   React.ComponentRef<typeof SelectPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
->(({ className = "", position = "popper", sideOffset = 6, ...props }, ref) => (
+>(({ className = "", position = "popper", sideOffset = 8, ...props }, ref) => (
   <SelectPrimitive.Portal>
     <SelectPrimitive.Content
       ref={ref}

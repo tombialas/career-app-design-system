@@ -33,14 +33,14 @@ export function FormField({
       {id != null ? (
         <Label htmlFor={id} isRequired={isRequired}>{label}</Label>
       ) : (
-        <span className="block text-[12px] font-bold uppercase tracking-wider text-ds-text-primary">{label}</span>
+        <span className="block text-xs font-bold uppercase tracking-wider text-ds-text-primary">{label}</span>
       )}
       {description != null && (
         <p className="text-xs text-ds-text-muted">{description}</p>
       )}
       {children}
       {error != null && (
-        <p className="text-sm text-ds-feedback-danger" role="alert">
+        <p className="text-xs font-semibold tracking-wide text-ds-feedback-danger" role="alert">
           {error}
         </p>
       )}

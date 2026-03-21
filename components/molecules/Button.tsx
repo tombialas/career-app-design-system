@@ -61,8 +61,8 @@ export function Button({
       disabled={disabled}
       className={
         "inline-flex items-center justify-center gap-3 rounded-full font-semibold leading-none " +
-        "transition-[background-color,color,border-color,transform] duration-[var(--duration-ds-fast)] ease-[var(--ease-ds-out)] " +
-        "hover:scale-[1.02] active:scale-[0.98] " +
+        "transition-[background-color,color,border-color,transform,box-shadow] duration-[var(--duration-ds-normal)] ease-[var(--ease-ds-out-expo)] " +
+        "hover:scale-[1.02] hover:shadow-ds-diffuse-sm active:scale-[0.98] " +
         "focus:outline-none focus:ring-2 focus:ring-ds-primary-strong focus:ring-offset-2 " +
         "disabled:pointer-events-none disabled:opacity-60 " +
         variantClasses[variant] +

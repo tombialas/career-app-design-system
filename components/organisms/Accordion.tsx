@@ -56,7 +56,7 @@ const AccordionContent = React.forwardRef<
   <AccordionPrimitive.Content
     ref={ref}
     className={`
-      overflow-hidden text-sm text-ds-text-secondary
+      overflow-hidden text-base text-ds-text-secondary
       data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down
       ${className}
     `.trim()}

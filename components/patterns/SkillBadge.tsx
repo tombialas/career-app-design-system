@@ -29,9 +29,9 @@ export function SkillBadge({
   return (
     <span
       className={`
-        inline-flex items-center gap-1 rounded-full px-3 py-1.5
+        inline-flex items-center gap-1 rounded-full px-3 py-1
         text-xs font-bold uppercase tracking-wide
-        transition-colors duration-[var(--duration-ds-fast)] ease-[var(--ease-ds-out)]
+        backdrop-blur-sm transition-colors duration-[var(--duration-ds-normal)] ease-[var(--ease-ds-out-expo)]
         ${s}
         ${className}
       `.trim()}
@@ -42,9 +42,9 @@ export function SkillBadge({
           type="button"
           onClick={onEdit}
           aria-label="Upravit"
-          className="rounded-full p-0.5 opacity-70 hover:opacity-100"
+          className="rounded-full p-1 opacity-70 hover:opacity-100 transition-opacity"
         >
-          <Pencil className="h-3.5 w-3.5" />
+          <Pencil className="h-3 w-3" />
         </button>
       )}
       {onRemove != null && (
@@ -52,9 +52,9 @@ export function SkillBadge({
           type="button"
           onClick={onRemove}
           aria-label="Odstranit"
-          className="rounded-full p-0.5 opacity-70 hover:opacity-100"
+          className="rounded-full p-1 opacity-70 hover:opacity-100 transition-opacity"
         >
-          <X className="h-3.5 w-3.5" />
+          <X className="h-3 w-3" />
         </button>
       )}
     </span>

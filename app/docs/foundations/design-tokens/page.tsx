@@ -1,6 +1,6 @@
 import { colorPalette, colorTokens } from "../../../../tokens/colors";
 import { typographyTokens } from "../../../../tokens/typography";
-import { borderWidthTokens, radiusTokens, spacingTokens, zIndexTokens } from "../../../../tokens/layout";
+import { borderWidthTokens, elevationTokens, radiusTokens, shadowTokens, spacingTokens, zIndexTokens } from "../../../../tokens/layout";
 import { durationTokens, easingTokens } from "../../../../tokens/motion";
 import { TabsNav, type TabLink } from "../../_components/TabsNav";
 import { LinkButton } from "../../_components/LinkButton";
@@ -222,6 +222,23 @@ function SystemTab() {
         <p className="text-sm text-ds-text-secondary">
           <strong>Z-index:</strong> {Object.entries(zIndexTokens).map(([k, v]) => `${k}:${v}`).join(" · ")}
         </p>
+      </div>
+
+      <div className="space-y-4 border-t border-ds-border-subtle pt-4">
+        <h4 className="text-lg font-semibold text-ds-text-primary">Elevation &amp; Shadows</h4>
+        <p className="text-sm text-ds-text-secondary">Refined, multi-layered shadows for 2026 High-End Depth &amp; Polish.</p>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {Object.entries(elevationTokens).map(([key, value]) => (
+            <div key={`elev-${key}`} className="flex flex-col gap-2 rounded-xl border border-ds-border-subtle bg-ds-surface-card p-4" style={{ boxShadow: value !== "none" ? value : undefined }}>
+              <p className="font-mono text-xs font-semibold text-ds-text-primary">elevation.{key}</p>
+            </div>
+          ))}
+          {Object.entries(shadowTokens).map(([key, value]) => (
+            <div key={`shadow-${key}`} className="flex flex-col gap-2 rounded-xl border border-ds-border-subtle bg-ds-surface-card p-4" style={{ boxShadow: value }}>
+              <p className="font-mono text-xs font-semibold text-ds-text-primary">shadow.{key}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="space-y-3 border-t border-ds-border-subtle pt-4">

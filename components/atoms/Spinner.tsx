@@ -17,11 +17,12 @@ const sizeClasses: Record<SpinnerSize, string> = {
 };
 
 export function Spinner({ size = "md", className = "" }: SpinnerProps) {
+  const colorClass = className.includes("text-") ? "" : "text-ds-text-secondary/50";
   return (
     <Loader2
       aria-label="Loading"
       role="status"
-      className={`animate-spin ${sizeClasses[size]} text-ds-text-muted ${className}`.trim()}
+      className={`animate-spin ${sizeClasses[size]} ${colorClass} ${className}`.trim()}
     />
   );
 }

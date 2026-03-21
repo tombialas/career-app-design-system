@@ -47,6 +47,8 @@
     "./components/FormField": "./components/patterns/FormField.tsx",
     "./components/EmptyState": "./components/patterns/EmptyState.tsx",
     "./components/SkillBadge": "./components/patterns/SkillBadge.tsx",
+    "./components/PageHeader": "./components/patterns/PageHeader.tsx",
+    "./components/StatList": "./components/patterns/StatList.tsx",
     "./components/DocSearch": "./components/molecules/DocSearch.tsx"
   },
   "files": [

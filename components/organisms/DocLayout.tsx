@@ -65,7 +65,7 @@ export function DocLayout({ children }: { children: React.ReactNode }) {
     activeHref: pathname ?? undefined,
     linkComponent,
     footer: (
-      <p className="text-[10px] text-ds-text-tertiary">
+      <p className="text-xs text-ds-text-tertiary">
         Brand manual integration is planned.
       </p>
     ),

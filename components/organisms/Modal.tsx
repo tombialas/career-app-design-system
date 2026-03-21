@@ -93,7 +93,7 @@ function ModalDescription({
 }: React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>) {
   return (
     <DialogPrimitive.Description
-      className={`text-sm text-ds-text-secondary ${className}`.trim()}
+      className={`text-base text-ds-text-secondary ${className}`.trim()}
       {...props}
     />
   );

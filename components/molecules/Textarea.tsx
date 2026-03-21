@@ -18,7 +18,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     return (
       <div className="w-full min-w-0">
         {label && textareaId && (
-          <Label htmlFor={textareaId} className="mb-1.5">
+          <Label htmlFor={textareaId} className="mb-2">
             {label}
           </Label>
         )}
@@ -28,8 +28,8 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           className={`
             w-full min-h-[120px] rounded-2xl border bg-ds-surface-card px-4 py-3 font-sans text-ds-text-primary
             shadow-ds-diffuse-sm placeholder:text-ds-text-muted
-            transition-all duration-[var(--duration-ds-fast)] ease-[var(--ease-ds-out)]
-            focus:outline-none focus:ring-2 focus:ring-ds-primary-strong focus:ring-offset-2 focus:shadow-ds-diffuse-md
+            transition-all duration-[var(--duration-ds-normal)] ease-[var(--ease-ds-out-expo)]
+            focus:outline-none focus:ring-2 focus:ring-ds-primary-strong focus:ring-offset-2 focus:shadow-ds-diffuse-md hover:border-ds-border-subtle/80 hover:shadow-sm
             disabled:cursor-not-allowed disabled:opacity-60
             ${hasError ? "border-ds-feedback-danger ring-2 ring-ds-feedback-danger ring-offset-2" : "border-ds-border-subtle"}
             ${className}
@@ -41,7 +41,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         {error && (
           <p
             id={textareaId ? `${textareaId}-error` : undefined}
-            className="mt-1.5 text-sm text-ds-feedback-danger"
+            className="mt-2 text-xs font-semibold tracking-wide text-ds-feedback-danger"
             role="alert"
           >
             {error}

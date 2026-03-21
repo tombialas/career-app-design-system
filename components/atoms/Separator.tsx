@@ -19,8 +19,8 @@ export function Separator({
       role={decorative ? "none" : "separator"}
       aria-orientation={decorative ? undefined : orientation}
       className={`
-        shrink-0 bg-ds-border-subtle
-        ${orientation === "horizontal" ? "h-px w-full" : "h-full w-px"}
+        shrink-0 bg-ds-border-subtle opacity-50
+        ${orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]"}
         ${className}
       `.trim()}
       {...props}

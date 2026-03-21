@@ -115,7 +115,7 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={`
-      relative z-10 inline-flex min-h-9 min-w-0 max-w-full shrink-0 items-center justify-center break-words whitespace-normal rounded-[var(--radius-ds-nested-inner)] px-3 py-1.5 text-center text-sm font-medium leading-snug [overflow-wrap:anywhere] sm:whitespace-nowrap
+      relative z-10 inline-flex min-h-[40px] min-w-0 max-w-full shrink-0 items-center justify-center break-words whitespace-normal rounded-[var(--radius-ds-nested-inner)] px-4 py-2 text-center text-base font-medium leading-snug [overflow-wrap:anywhere] sm:whitespace-nowrap
       text-ds-text-muted transition-colors
       focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ds-primary-strong focus-visible:ring-offset-2
       disabled:pointer-events-none disabled:opacity-50

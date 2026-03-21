@@ -79,9 +79,9 @@ export function Chip({
   return (
     <span
       className={
-        "inline-flex items-center rounded-full px-3 py-1.5 text-xs font-semibold " +
-        "transition-transform transition-colors duration-[var(--duration-ds-fast)] ease-[var(--ease-ds-out)] " +
-        "hover:scale-[1.03] active:scale-[0.98] " +
+        "inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold backdrop-blur-sm " +
+        "transition-transform transition-colors duration-[var(--duration-ds-normal)] ease-[var(--ease-ds-out-expo)] " +
+        "hover:scale-[1.03] hover:shadow-sm active:scale-[0.98] " +
         stateClasses +
         (className ? " " + className : "")
       }

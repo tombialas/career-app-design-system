@@ -4,24 +4,28 @@ export const typographyTokens = {
     fontSize: 48,
     lineHeight: 56,
     fontWeight: 700,
+    letterSpacing: "-0.02em",
   },
   heading2: {
     label: "Heading 2 / Page title",
     fontSize: 32,
     lineHeight: 40,
     fontWeight: 700,
+    letterSpacing: "-0.015em",
   },
   heading3: {
     label: "Heading 3 / Section title",
     fontSize: 24,
     lineHeight: 32,
     fontWeight: 600,
+    letterSpacing: "-0.01em",
   },
   heading4: {
     label: "Heading 4 / Block title",
     fontSize: 20,
     lineHeight: 28,
     fontWeight: 600,
+    letterSpacing: "-0.005em",
   },
   bodyL: {
     label: "Body L / Default text",

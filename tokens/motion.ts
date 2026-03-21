@@ -5,9 +5,9 @@
 
 /** Duration – when to use: fast = hover/feedback, normal = dropdown/modal open, slow = sidebar/drawer. */
 export const durationTokens = {
-  fast: "150ms",
-  normal: "250ms",
-  slow: "400ms",
+  fast: "200ms",
+  normal: "300ms",
+  slow: "500ms",
 } as const;
 
 /**

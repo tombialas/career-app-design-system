@@ -3,6 +3,8 @@ import { Component, Palette, Type, Compass, Box, Blocks, LayoutGrid, Shapes } fr
 import { docsIndex } from "../config/docsIndex";
 import { DocSearch } from "../components/molecules/DocSearch";
 import { ComponentShowcase } from "./_components/ComponentShowcase";
+import { Card } from "../components/organisms/Card";
+import { Chip } from "../components/molecules/Chip";
 
 const quickLinks: Array<{ href: string; label: string; description: string; icon: React.ReactNode }> = [
   { href: "/docs/foundations/design-tokens", label: "Design Tokens", description: "Colors, type, layout, motion", icon: <Component className="h-5 w-5" /> },
@@ -50,15 +52,17 @@ export default function HomePage() {
             <Link
               key={link.href}
               href={link.href}
-              className="group flex items-start gap-3 rounded-3xl border border-ds-border-subtle bg-ds-surface-card/50 p-4 transition-all duration-[var(--duration-ds-fast)] hover:border-ds-border-subtle/80 hover:shadow-ds-diffuse-md hover:-translate-y-0.5"
+              className="group outline-none"
             >
-              <span className="mt-0.5 shrink-0 text-ds-text-muted transition-colors group-hover:text-ds-primary-strong">
-                {link.icon}
-              </span>
-              <div className="min-w-0">
-                <p className="text-sm font-semibold text-ds-text-primary">{link.label}</p>
-                <p className="mt-0.5 text-xs text-ds-text-muted">{link.description}</p>
-              </div>
+              <Card hoverable compact className="flex h-full items-start gap-3">
+                <span className="mt-1 shrink-0 text-ds-text-muted transition-colors group-hover:text-ds-primary-strong">
+                  {link.icon}
+                </span>
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold text-ds-text-primary">{link.label}</p>
+                  <p className="mt-1 text-xs text-ds-text-muted">{link.description}</p>
+                </div>
+              </Card>
             </Link>
           ))}
         </div>
@@ -75,11 +79,13 @@ export default function HomePage() {
               <Link
                 key={cl.href}
                 href={cl.href}
-                className="inline-flex items-center gap-1.5 rounded-full border border-ds-border-subtle bg-ds-surface-card-soft/50 px-3 py-1.5 text-xs font-medium text-ds-text-secondary transition-colors hover:border-ds-primary-strong hover:text-ds-primary-strong"
+                className="outline-none"
               >
-                {cl.icon}
-                {cl.label}
-                <span className="text-ds-text-muted">· {cl.count}</span>
+                <Chip variant="light" className="gap-1.5 hover:border-ds-primary-strong hover:text-ds-primary-strong">
+                  {cl.icon}
+                  {cl.label}
+                  <span className="text-ds-text-muted ml-0.5">· {cl.count}</span>
+                </Chip>
               </Link>
             ))}
           </div>

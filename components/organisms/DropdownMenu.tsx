@@ -17,7 +17,7 @@ const DropdownMenuContent = React.forwardRef<
       ref={ref}
       sideOffset={sideOffset}
       className={`
-        z-[var(--z-ds-dropdown)] min-w-[10rem] overflow-hidden rounded-2xl border border-ds-border-subtle bg-ds-surface-card/90 backdrop-blur-xl p-1.5
+        z-[var(--z-ds-dropdown)] min-w-[12rem] overflow-hidden rounded-2xl border border-ds-border-subtle bg-ds-surface-card/90 backdrop-blur-xl p-2
         text-ds-text-primary shadow-ds-diffuse-md
         data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95
         data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95
@@ -41,14 +41,16 @@ const DropdownMenuItem = React.forwardRef<
   <DropdownMenuPrimitive.Item
     ref={ref}
     className={`
-      relative flex cursor-default select-none items-center gap-2 rounded-lg px-2.5 py-2 text-sm outline-none
+      relative flex cursor-default select-none items-center gap-3 rounded-lg px-3 py-2 text-base outline-none
       transition-colors duration-[var(--duration-ds-fast)]
-      focus:bg-ds-surface-card-soft focus:text-ds-text-primary
-      data-[highlighted]:bg-ds-surface-card-soft data-[highlighted]:text-ds-text-primary
+      ${
+        destructive
+          ? "text-ds-feedback-danger focus:bg-ds-feedback-danger focus:text-ds-on-primary data-[highlighted]:bg-ds-feedback-danger data-[highlighted]:text-ds-on-primary"
+          : "focus:bg-ds-surface-card-soft focus:text-ds-text-primary data-[highlighted]:bg-ds-surface-card-soft data-[highlighted]:text-ds-text-primary"
+      }
       data-[disabled]:pointer-events-none data-[disabled]:opacity-50
       [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0
       ${inset ? "pl-8" : ""}
-      ${destructive ? "text-ds-feedback-danger data-[highlighted]:bg-ds-red-500 data-[highlighted]:text-ds-red-900" : ""}
       ${className}
     `.trim()}
     {...props}
@@ -62,7 +64,7 @@ const DropdownMenuSeparator = React.forwardRef<
 >(({ className = "", ...props }, ref) => (
   <DropdownMenuPrimitive.Separator
     ref={ref}
-    className={`-mx-0.5 my-1 h-px bg-ds-border-subtle ${className}`.trim()}
+    className={`-mx-2 my-1 h-[1px] bg-ds-border-subtle ${className}`.trim()}
     {...props}
   />
 ));

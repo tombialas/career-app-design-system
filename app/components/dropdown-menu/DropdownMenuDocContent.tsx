@@ -75,10 +75,10 @@ export default function DropdownMenuDocContent() {
         </h2>
         <div className="text-sm text-ds-text-secondary">
           <ul className="list-inside list-disc space-y-1">
-            <li><strong>Content:</strong> bg-ds-surface-card, rounded-xl, shadow-ds-diffuse-md, p-1.5</li>
+            <li><strong>Content:</strong> bg-ds-surface-card, rounded-xl, shadow-ds-diffuse-md, p-2</li>
             <li><strong>Item:</strong> rounded-lg, focus bg-ds-surface-card-soft</li>
             <li><strong>Separator:</strong> bg-ds-border-subtle</li>
-            <li><strong>destructive:</strong> text-ds-feedback-danger</li>
+            <li><strong>destructive:</strong> text-ds-feedback-danger (hover: bg-ds-feedback-danger, text-ds-on-primary)</li>
           </ul>
         </div>
       </section>

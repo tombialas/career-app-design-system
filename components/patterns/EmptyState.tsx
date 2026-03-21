@@ -31,9 +31,9 @@ export function EmptyState({
           {icon}
         </div>
       )}
-      <h3 className="text-lg font-bold text-ds-text-primary">{title}</h3>
+      <h3 className="text-xl font-bold text-ds-text-primary">{title}</h3>
       {description != null && description.length > 0 && (
-        <p className="mt-2 mb-6 max-w-sm text-sm text-ds-text-secondary">{description}</p>
+        <p className="mt-2 mb-6 max-w-sm text-base text-ds-text-secondary">{description}</p>
       )}
       {action != null && <div className={description != null && description.length > 0 ? "" : "mt-6"}>{action}</div>}
     </div>

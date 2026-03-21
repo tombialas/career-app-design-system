@@ -25,7 +25,7 @@ type ToastVariant = "default" | "success" | "destructive";
 
 const variantClasses: Record<ToastVariant, string> = {
   default:
-    "border-0 bg-ds-surface-card text-ds-text-primary shadow-ds-diffuse-md",
+    "border-0 bg-ds-surface-card text-ds-text-primary shadow-ds-diffuse-lg",
   success:
     "border-0 bg-ds-accent-mint-soft text-ds-text-primary",
   destructive:
@@ -40,7 +40,7 @@ const ToastRoot = React.forwardRef<
     ref={ref}
     className={`
       group pointer-events-auto relative flex max-w-full min-w-0 items-start justify-between gap-3 overflow-hidden
-      rounded-2xl px-4 py-3 pr-10 text-sm transition-all
+      rounded-2xl px-4 py-3 pr-10 text-base transition-all
       data-[state=open]:animate-in data-[state=closed]:animate-out
       data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:translate-x-0
       data-[swipe=end]:data-[state=closed]:animate-out
@@ -70,7 +70,7 @@ const ToastDescription = React.forwardRef<
 >(({ className = "", ...props }, ref) => (
   <ToastPrimitive.Description
     ref={ref}
-    className={`mt-0.5 break-words text-sm opacity-90 ${className}`.trim()}
+    className={`mt-1 break-words text-xs opacity-90 ${className}`.trim()}
     {...props}
   />
 ));
@@ -83,7 +83,7 @@ const ToastClose = React.forwardRef<
   <ToastPrimitive.Close
     ref={ref}
     className={`
-      absolute right-2 top-1/2 -translate-y-1/2 rounded-lg p-1.5 opacity-70 transition-opacity
+      absolute right-2 top-1/2 -translate-y-1/2 rounded-lg p-2 opacity-70 transition-opacity
       hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ds-primary-strong focus:ring-offset-2
       ${className}
     `.trim()}

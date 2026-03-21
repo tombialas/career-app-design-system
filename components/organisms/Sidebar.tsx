@@ -79,11 +79,11 @@ export function Sidebar({
     const active = isActive(item.href);
     const itemClassName = isDark
       ? `
-      flex w-full items-center justify-start gap-3 rounded-full px-3 py-2.5 text-sm font-medium transition-colors font-[family-name:var(--font-figtree),system-ui,sans-serif]
+      flex w-full items-center justify-start gap-3 rounded-full px-3 py-3 text-base font-medium transition-colors font-[family-name:var(--font-figtree),system-ui,sans-serif]
       ${active ? "bg-ds-primary-soft text-ds-purple-900 font-semibold" : "text-ds-on-dark-muted hover:bg-white/10 hover:text-ds-on-dark"}
     `.trim()
       : `
-      flex w-full items-center justify-start gap-3 rounded-full px-3 py-2.5 text-sm font-medium transition-colors font-[family-name:var(--font-figtree),system-ui,sans-serif]
+      flex w-full items-center justify-start gap-3 rounded-full px-3 py-3 text-base font-medium transition-colors font-[family-name:var(--font-figtree),system-ui,sans-serif]
       ${active ? "bg-ds-surface-card-soft text-ds-text-primary" : "text-ds-text-secondary hover:bg-ds-surface-card-soft/60 hover:text-ds-text-primary"}
     `.trim();
     const content = (
@@ -132,7 +132,7 @@ export function Sidebar({
                 <p className={`mb-1 px-3 py-1 text-xs font-semibold uppercase tracking-wider ${groupLabelClass} font-[family-name:var(--font-figtree),system-ui,sans-serif]`}>
                   {item.label}
                 </p>
-                <div className="space-y-0.5">
+                <div className="space-y-1">
                   {item.children.map((child) => (
                     <React.Fragment key={child.href}>{renderItem(child)}</React.Fragment>
                   ))}

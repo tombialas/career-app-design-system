@@ -72,15 +72,18 @@
   --color-ds-blue-700: #3b93f6;
   --color-ds-blue-900: #1e518a;
 
-  /* Shadows (diffuse) */
-  --shadow-ds-diffuse-sm: 0 0 20px rgba(0, 0, 0, 0.08), 0 0 40px rgba(0, 0, 0, 0.05);
-  --shadow-ds-diffuse-md: 0 0 24px rgba(0, 0, 0, 0.1), 0 0 48px rgba(0, 0, 0, 0.06);
-  --shadow-ds-diffuse-lg: 0 0 32px rgba(0, 0, 0, 0.12), 0 0 64px rgba(0, 0, 0, 0.07);
+  /* Shadows (diffuse) & Elevation */
+  --shadow-ds-diffuse-sm: 0 0 20px rgba(0, 0, 0, 0.04), 0 0 40px rgba(0, 0, 0, 0.02);
+  --shadow-ds-diffuse-md: 0 0 32px rgba(0, 0, 0, 0.06), 0 0 48px rgba(0, 0, 0, 0.03);
+  --shadow-ds-diffuse-lg: 0 0 48px rgba(0, 0, 0, 0.08), 0 0 80px rgba(0, 0, 0, 0.04);
+  --shadow-ds-card: 0 1px 3px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
+  --shadow-ds-card-hover: 0 4px 16px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-ds-modal: 0 24px 48px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.04);
 
   /* Motion: duration + easing */
-  --duration-ds-fast: 150ms;
-  --duration-ds-normal: 250ms;
-  --duration-ds-slow: 400ms;
+  --duration-ds-fast: 200ms;
+  --duration-ds-normal: 300ms;
+  --duration-ds-slow: 500ms;
   --ease-ds-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-ds-out: cubic-bezier(0, 0, 0.2, 1);
   --ease-ds-linear: linear;

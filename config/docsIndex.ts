@@ -33,10 +33,10 @@ export const docsIndex: DocEntry[] = [
   // Foundations
   {
     title: "Design Tokens",
-    description: "Color, type, layout, and motion tokens",
+    description: "Color, type, layout, shadows, and motion tokens",
     href: "/docs/foundations/design-tokens",
     category: "Foundations",
-    keywords: ["tokens", "variables", "design", "spacing", "radius", "motion", "easing", "duration"],
+    keywords: ["tokens", "variables", "design", "spacing", "radius", "motion", "easing", "duration", "shadows", "shadow", "diffuse", "elevation"],
   },
   {
     title: "Colors",
@@ -110,4 +110,6 @@ export const docsIndex: DocEntry[] = [
   { title: "Form Field", description: "Label + input + error composition", href: "/components/form-field", category: "Patterns", keywords: ["form", "field", "label", "error", "validation"] },
   { title: "Skill Badge", description: "Skill tag with match indicator", href: "/components/skill-badge", category: "Patterns", keywords: ["skill", "badge", "tag", "match", "requirement"] },
   { title: "Empty State", description: "Placeholder for empty data views", href: "/components/empty-state", category: "Patterns", keywords: ["empty", "state", "placeholder", "no data", "illustration"] },
+  { title: "Page Header", description: "Standard page header with breadcrumbs and actions", href: "/components/page-header", category: "Patterns", keywords: ["header", "page", "title", "breadcrumbs", "actions"] },
+  { title: "Stat List", description: "Grid of statistical KPI cards", href: "/components/stat-list", category: "Patterns", keywords: ["stat", "list", "kpi", "metrics", "dashboard"] },
 ];

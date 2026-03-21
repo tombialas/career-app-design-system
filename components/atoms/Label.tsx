@@ -13,7 +13,7 @@ export const Label = forwardRef<HTMLLabelElement, LabelProps>(
   ({ className = "", isRequired, children, ...props }, ref) => (
     <label
       ref={ref}
-      className={`block text-[11px] font-bold uppercase tracking-[0.16em] text-ds-text-primary select-none ${className}`.trim()}
+      className={`block text-xs font-bold uppercase tracking-[0.12em] text-ds-text-secondary select-none ${className}`.trim()}
       {...props}
     >
       {children}

@@ -11,6 +11,7 @@ const Avatar = React.forwardRef<
     ref={ref}
     className={`
       inline-flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full
+      ring-1 ring-ds-border-subtle ring-offset-1 ring-offset-ds-surface-page
       ${className}
     `.trim()}
     {...props}
@@ -41,7 +42,7 @@ const AvatarFallback = React.forwardRef<
     ref={ref}
     className={`
       flex h-full w-full items-center justify-center
-      bg-ds-surface-card-soft text-ds-text-primary font-semibold
+      bg-ds-surface-card-soft text-ds-text-primary text-sm font-semibold tracking-wide
       ${className}
     `.trim()}
     {...props}

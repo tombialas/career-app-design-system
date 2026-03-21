@@ -29,7 +29,7 @@ export function ListItem({
   const content = (
     <>
       <span className="min-w-0 flex-1 font-normal text-base text-ds-text-primary">{label}</span>
-      {value != null && <span className="text-sm text-ds-text-muted">{value}</span>}
+      {value != null && <span className="text-xs font-semibold text-ds-text-muted">{value}</span>}
       {showChevron && <ChevronRight className="h-4 w-4 shrink-0 text-ds-text-tertiary" />}
     </>
   );

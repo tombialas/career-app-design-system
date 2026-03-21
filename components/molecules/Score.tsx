@@ -154,7 +154,7 @@ export function Score({
   return (
     <div className={`inline-flex flex-col items-center justify-end ${className}`.trim()} aria-hidden>
       <HalfDonut value={value} trackClass={trackClass} fillClass={fillClass} size={size} strokeWidth={SCORE_STROKE_WIDTH} />
-      <span className={`mt-0.5 font-bold leading-none ${textClass}`} style={{ fontSize: fontSizePx }}>
+      <span className={`mt-1 font-bold leading-none ${textClass}`} style={{ fontSize: fontSizePx }}>
         {roundedValue}
       </span>
     </div>

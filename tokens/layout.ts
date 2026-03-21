@@ -45,9 +45,9 @@ export const nestedTabChromeTokens = {
 /** Elevation (box-shadow). Flat, card, modal. */
 export const elevationTokens = {
   none: "none",
-  card: "0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)",
-  cardHover: "0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04)",
-  modal: "0 20px 40px rgba(0,0,0,0.12), 0 8px 16px rgba(0,0,0,0.06)",
+  card: "0 1px 3px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.02)",
+  cardHover: "0 4px 16px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.02)",
+  modal: "0 24px 48px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.04)",
 } as const;
 
 /**
@@ -55,9 +55,9 @@ export const elevationTokens = {
  * Use for inputs, floating elements, subtle lift.
  */
 export const shadowTokens = {
-  diffuseSm: "0 0 20px rgba(0,0,0,0.08), 0 0 40px rgba(0,0,0,0.05)",
-  diffuseMd: "0 0 24px rgba(0,0,0,0.10), 0 0 48px rgba(0,0,0,0.06)",
-  diffuseLg: "0 0 32px rgba(0,0,0,0.12), 0 0 64px rgba(0,0,0,0.07)",
+  diffuseSm: "0 0 20px rgba(0,0,0,0.04), 0 0 40px rgba(0,0,0,0.02)",
+  diffuseMd: "0 0 32px rgba(0,0,0,0.06), 0 0 48px rgba(0,0,0,0.03)",
+  diffuseLg: "0 0 48px rgba(0,0,0,0.08), 0 0 80px rgba(0,0,0,0.04)",
 } as const;
 
 /**
