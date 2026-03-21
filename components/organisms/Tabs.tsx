@@ -86,7 +86,7 @@ const TabsList = React.forwardRef<
     <TabsPrimitive.List
       ref={mergedRef}
       className={`
-        relative box-border flex w-fit max-w-full min-h-0 min-w-0 flex-wrap items-center justify-start
+        relative box-border inline-flex max-w-full min-h-0 min-w-0 flex-wrap items-center justify-start
         gap-[var(--spacing-ds-tab-track-pad)] rounded-[var(--radius-ds-nested-outer)] border border-ds-border-subtle bg-ds-surface-base
         p-[var(--spacing-ds-tab-track-pad)] text-ds-text-muted
         ${className}
@@ -95,7 +95,7 @@ const TabsList = React.forwardRef<
     >
       <span
         aria-hidden
-        className="pointer-events-none absolute left-0 top-0 z-[1] will-change-[transform,width,height] rounded-[var(--radius-ds-nested-inner)] bg-ds-surface-card shadow-ds-diffuse-sm transition-[transform,width,height] duration-[var(--duration-ds-normal)] ease-[var(--ease-ds-out)]"
+        className="pointer-events-none absolute left-0 top-0 z-[1] will-change-[transform,width,height] rounded-[var(--radius-ds-nested-inner)] bg-white shadow-ds-diffuse-sm transition-[transform,width,height] duration-[var(--duration-ds-normal)] ease-[var(--ease-ds-out)]"
         style={{
           transform: `translate3d(${indicator.left}px, ${indicator.top}px, 0)`,
           width: indicator.width,

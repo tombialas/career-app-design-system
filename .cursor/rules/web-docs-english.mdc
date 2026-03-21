@@ -1,0 +1,19 @@
+---
+description: Web documentation UI must be in English
+alwaysApply: true
+---
+
+# Language rule
+
+When changing or creating front-end/UI content for the Design System web documentation (pages/components rendered on the DS site), all user-facing text must be in **English**.
+
+Exceptions:
+- The only Czech/other languages allowed are in **chat messages to the user** (i.e., communication in this conversation).
+- Do not translate technical identifiers (prop names, token keys, class names, routes, component names, code comments that are purely technical).
+
+# Practical checklist
+
+- If you see Czech text in `app/` routes used by the docs UI (e.g. `/docs/*`, `/tokens`, the overview page, and the doc tab contents rendered there), translate it to English before finalizing the change.
+- Keep button labels, headings, descriptions, and empty-state messages in English.
+- Keep placeholder/demo texts inside `app/demo/**` unchanged unless explicitly requested.
+
