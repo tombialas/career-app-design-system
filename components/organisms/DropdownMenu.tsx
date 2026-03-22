@@ -7,6 +7,13 @@ const DropdownMenu = DropdownMenuPrimitive.Root;
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
 const DropdownMenuGroup = DropdownMenuPrimitive.Group;
 const DropdownMenuPortal = DropdownMenuPrimitive.Portal;
+const DropdownMenuSub = DropdownMenuPrimitive.Sub;
+const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
+const DropdownMenuSubTrigger = DropdownMenuPrimitive.SubTrigger;
+const DropdownMenuSubContent = DropdownMenuPrimitive.SubContent;
+const DropdownMenuCheckboxItem = DropdownMenuPrimitive.CheckboxItem;
+const DropdownMenuRadioItem = DropdownMenuPrimitive.RadioItem;
+const DropdownMenuLabel = DropdownMenuPrimitive.Label;
 
 const DropdownMenuContent = React.forwardRef<
   React.ComponentRef<typeof DropdownMenuPrimitive.Content>,
@@ -45,7 +52,10 @@ const DropdownMenuItem = React.forwardRef<
       transition-colors duration-[var(--duration-ds-fast)]
       ${
         destructive
-          ? "text-ds-feedback-danger focus:bg-ds-feedback-danger focus:text-ds-on-primary data-[highlighted]:bg-ds-feedback-danger data-[highlighted]:text-ds-on-primary"
+          ? "!text-ds-feedback-danger hover:!bg-ds-feedback-danger hover:!text-ds-on-primary " +
+            "focus:!bg-ds-feedback-danger focus:!text-ds-on-primary " +
+            "data-[highlighted]:!bg-ds-feedback-danger data-[highlighted]:!text-ds-on-primary " +
+            "[&_svg]:!text-ds-feedback-danger hover:[&_svg]:!text-ds-on-primary data-[highlighted]:[&_svg]:!text-ds-on-primary"
           : "focus:bg-ds-surface-card-soft focus:text-ds-text-primary data-[highlighted]:bg-ds-surface-card-soft data-[highlighted]:text-ds-text-primary"
       }
       data-[disabled]:pointer-events-none data-[disabled]:opacity-50
@@ -78,4 +88,11 @@ export {
   DropdownMenuSeparator,
   DropdownMenuGroup,
   DropdownMenuPortal,
+  DropdownMenuSub,
+  DropdownMenuRadioGroup,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
+  DropdownMenuCheckboxItem,
+  DropdownMenuRadioItem,
+  DropdownMenuLabel,
 };
